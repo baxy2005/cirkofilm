@@ -1,0 +1,17 @@
+.owl-nav--custom {
+  h6 {
+    margin: 0
+  }
+  @include flexContainer(row, center, flex-end);
+  .owl-prev {
+    order: 2;
+  }
+  .owl-next {
+    order: 3;
+  }
+  .owl-next, .owl-prev {
+    background: transparent;
+    border: 0;
+    font-size: 2em;
+  }
+}

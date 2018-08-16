@@ -13,40 +13,42 @@
 </head>
 <body>
   <header>
-    <div class="container fixed-top">
-      <div class="row ">
-      <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent">
-        <a class="navbar-brand mr-auto mr-lg-0" href="#"> <img src="images/cirko-film-brand-white.svg" alt="Cirko Film"></a>
-        <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        <div class="navbar-collapse offcanvas-collapse justify-content-end" id="navbarsExampleDefault">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">FILMEK <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">A MOZIKBAN,</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">VOD</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">FILM IGÉNYLÉS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">SAJTÓ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">KAPCSOLAT</a>
-            </li>
-          </ul>
+    <div class="container-fluid fixed-top top-nav">
+      <div class="container">
+        <div class="row">
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent">
+          <a class="navbar-brand mr-auto mr-lg-0" href="#"> <img src="images/cirko-film-brand-white.svg" alt="Cirko Film"></a>
+          <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="navbar-collapse offcanvas-collapse justify-content-end" id="navbarsExampleDefault">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">FILMEK <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">A MOZIKBAN,</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">VOD</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">FILM IGÉNYLÉS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SAJTÓ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">KAPCSOLAT</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
         </div>
-      </nav>
       </div>
     </div>
     <section>
-      <div class="owl-carousel owl-all-device">
+      <div class="owl-one owl-carousel">
         <div class="item">
           <picture>
             <source class="owl-lazy" media="(min-width: 650px)" data-srcset="images/gallery-carousel/cirko-film-carousel-01-large-prev.jpg">
@@ -72,8 +74,9 @@
           <div class="card-deck">
             <div class="card card--no-p-trans col-md-8">
               <h1 class="card-title">Most játsszák</h1>
+              <div id="owl-2" class="owl-nav owl-nav--custom"><h6>osszes</h6></div>
               <div class="card-deck">
-                <div class="owl-carousel owl-theme owl-carousel-small">
+                <div class="owl-two owl-carousel owl-custom-nav">
                   <div class="card">
                     <img class="card-img-top" src="images/posters/cirko-poster-01.jpg" alt="Card image cap">
                     <div class="card-body">
@@ -103,7 +106,8 @@
             </div>
             <div class="card card--no-p-trans col-md-4">
               <h1 class="card-title">Hamarosan jön</h1>
-              <div class="owl-carousel owl-theme owl-carousel-one">
+              <div id="owl-3" class="owl-nav owl-nav--custom"><h6>osszes</h6></div>
+              <div class="owl-three owl-carousel owl-theme owl-custom-nav">
                 <div class="card">
                   <img class="card-img-top" src="images/films/inthefade-tn.jpg" alt="Card image cap">
                   <div class="card-body">
@@ -148,8 +152,9 @@
         <!-- services-->
         <section>
           <h1>hírek</h1>
+          <div id="owl-4" class="owl-nav--custom owl-nav"><h6>osszes</h6></div>
           <div class="card-deck">
-            <div class="owl-carousel owl-theme owl-carousel-three">
+            <div class="owl-four owl-carousel owl-theme owl-custom-nav">
               <div class="card">
                 <img class="card-img-top" src=".../100px180/" alt="Card image cap">
                 <div class="card-body">
@@ -181,7 +186,72 @@
       </div>
     </div>
   </main>
-  <footer></footer>
+  <footer>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+          <a class="navbar-brand" href="#"><img src="images/cirko-film-brand.svg" alt=""></a>
+            <ul class="navbar-nav mr-auto">
+              <address>
+                1055 BUDAPEST, BALASSI B. U. 15-17. <br>
+                +36-1-269-1915 | info@CIRKOFILM.HU<br>
+                Copyright © 2018 CIRKO FILM
+              </address>
+            </ul>
+            <a class="btn btn-primary" href="#" role="button">facebook</a>
+            <a class="btn btn-primary" href="#" role="button">youtube</a>
+        </nav>
+      </div>
+    <section class="bg-dark m-0">
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">FILMEK</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">A MOZIKBAN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">VOD</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FILM IGÉNYLÉS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SAJTÓ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">RÓLUNK</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">KAPCSOLAT</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="bg-dark m-0">
+      <div class="container d-flex justify-content-between">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Impresszum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Felhasználói feltételek</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Adatvédelmi nyilatkozat</a>
+          </li>
+        </ul>
+        <ul class="nav">
+          <li class="nav-item">
+             <a class="nav-link" href="#">design: varadi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">develop: farm</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </footer>
   <!-- plugins js bootstrap owl-carousel etc.. -->
   <script src="js/plugin-min.js"></script>
   <script src="js/offcanvas.js"></script>

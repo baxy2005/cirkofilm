@@ -43,3 +43,14 @@ background-size: cover;
     @content;
   }
 }
+
+@mixin noGutter ($margin, $padding) {
+	.no-gutters {
+		margin-right: $margin;
+		margin-left: $margin;
+	>.col, >[class*="col-"] {
+		padding-right: $padding;
+		padding-left: $padding;
+	}
+	}
+}

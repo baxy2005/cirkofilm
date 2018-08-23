@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'bungeeregular';
+    src: url('../webfonts/bungee-regular-webfont.eot');
+    src: url('../webfonts/bungee-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/bungee-regular-webfont.woff2') format('woff2'),
+         url('../webfonts/bungee-regular-webfont.woff') format('woff'),
+         url('../webfonts/bungee-regular-webfont.ttf') format('truetype'),
+         url('../webfonts/bungee-regular-webfont.svg#bungeeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 @import "bootstrap";
 @import "base/variables";
 @import "base/mixins";
@@ -8,3 +21,7 @@
 @import "modules/navigation";
 @import "modules/cards";
 @import "modules/carousel";
+@import "modules/forms";
+@import "modules/pagination";
+@import "modules/badge";
+@import "modules/tabs";

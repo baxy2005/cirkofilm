@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,59 +9,61 @@
   <!-- plugins css bootstrap owl-carousel etc.. -->
   <link rel="stylesheet" href="css/plugin-min.css">
   <link rel="stylesheet" href="css/offcanvas.css">
+  <link rel="stylesheet" href="css/all.css">
   <!-- my css style -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header>
     <div class="container-fluid fixed-top top-nav">
       <div class="container">
         <div class="row">
-        <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent">
-          <a class="navbar-brand mr-auto mr-lg-0" href="#"> <img src="images/cirko-film-brand-white.svg" alt="Cirko Film"></a>
-          <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+          <nav class="navbar navbar-expand-lg  navbar-dark bg-transparent">
+            <a class="navbar-brand mr-auto mr-lg-0" href="#"> <img src="images/cirko-film-brand-white.svg" alt="Cirko Film"></a>
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
               <span class="navbar-toggler-icon"></span>
             </button>
-          <div class="navbar-collapse offcanvas-collapse justify-content-end" id="navbarsExampleDefault">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">FILMEK <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">A MOZIKBAN,</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">VOD</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">FILM IGÉNYLÉS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">SAJTÓ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">KAPCSOLAT</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+            <div class="navbar-collapse offcanvas-collapse justify-content-end" id="navbarsExampleDefault">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">FILMEK <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">A MOZIKBAN,</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">VOD</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">FILM IGÉNYLÉS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">SAJTÓ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">KAPCSOLAT</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
       </div>
     </div>
-    <section>
+    <section class="section--bm bg-light">
       <div class="owl-one owl-carousel">
         <div class="item">
           <picture>
             <source class="owl-lazy" media="(min-width: 650px)" data-srcset="images/gallery-carousel/cirko-film-carousel-01-large-prev.jpg">
             <source class="owl-lazy" media="(min-width: 350px)" data-srcset="images/gallery-carousel/cirko-film-carousel-01-medium-prev.jpg">
-            <img class="owl-lazy" data-src="images/gallery-carousel/cirko-film-carousel-01-falback-prev.jpg" alt="">
+            <div class="owl-lazy" data-src="images/gallery-carousel/cirko-film-carousel-01-falback-prev.jpg" alt=""></div>
           </picture>
         </div>
         <div class="item">
           <picture>
             <source class="owl-lazy" media="(min-width: 650px)" data-srcset="images/gallery-carousel/cirko-film-carousel-02-large-prev.jpg">
             <source class="owl-lazy" media="(min-width: 350px)" data-srcset="images/gallery-carousel/cirko-film-carousel-02-medium-prev.jpg">
-            <img class="owl-lazy" data-src="images/gallery-carousel/cirko-film-carousel-02-falback-prev.jpg" alt="">
+            <div class="owl-lazy" data-src="images/gallery-carousel/cirko-film-carousel-02-falback-prev.jpg" alt=""></div>
           </picture>
         </div>
       </div>
@@ -70,11 +73,12 @@
   <main>
     <div class="container-fluid bg-light">
       <div class="container">
-        <section>
+        <section class="section--bm">
           <div class="card-deck">
             <div class="card card--no-p-trans col-md-8">
               <h1 class="card-title">Most játsszák</h1>
-              <div id="owl-2" class="owl-nav owl-nav--custom"><h6>osszes</h6></div>
+              <div id="owl-2" class="owl-nav owl-nav--custom">
+                <h6>osszes</h6></div>
               <div class="card-deck">
                 <div class="owl-two owl-carousel owl-custom-nav">
                   <div class="card">
@@ -106,13 +110,19 @@
             </div>
             <div class="card card--no-p-trans col-md-4">
               <h1 class="card-title">Hamarosan jön</h1>
-              <div id="owl-3" class="owl-nav owl-nav--custom"><h6>osszes</h6></div>
+              <div id="owl-3" class="owl-nav owl-nav--custom">
+                <h6>osszes</h6></div>
               <div class="owl-three owl-carousel owl-theme owl-custom-nav">
-                <div class="card">
+                <div class="card card--arrow">
                   <img class="card-img-top" src="images/films/inthefade-tn.jpg" alt="Card image cap">
-                  <div class="card-body">
+                  <div class="d-flex flex-column flex-sm-row">
+                  <div class="card-body col-md-10">
                     <h3 class="card-title">Sötétben</h3>
                     <p class="card-text">német-francia krimi | 106 perc | 2017</p>
+                  </div>
+                  <div class="card-footer bg-transparent col-md-2">
+                    <a href="#" class="btn btn-primary"><i class="fas fa-arrow-right"></i></a>
+                  </div> <!-- footer -->
                   </div>
                 </div>
               </div>
@@ -120,42 +130,49 @@
           </div>
         </section>
         <!-- prew -->
-        <section>
+        <section class="section--bm">
           <h1>Szolgáltatásaink</h1>
-          <div class="card">
-            <img class="card-img-top" src=".../100px200/" alt="Card image cap">
+          <div class="card mb-4">
             <div class="card-body">
-              <h2 class="card-title">Video On Demand</h2>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <a href="#" class="btn btn-primary">nézz most</a>
+              <div class="row">
+                <div class="col-md-5">
+                  <h2 class="card-title">Video On Demand</h2>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <a href="#" class="btn btn-primary btn-lg ">nézz most <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="col-md-7 text-center">
+                  <img class="card-img-top card-img-top--fix-width" src="images/services-illu/cirko-services-vod-illu.svg" alt="Card image cap">
+                </div>
+              </div>
             </div>
           </div>
           <div class="card-deck">
-            <div class="card col-md-12">
-              <img class="card-img-top" src=".../100px200/" alt="Card image cap">
+            <div class="card text-center">
               <div class="card-body">
+                <img class="card-img-top card-img-top--fix-width mb-3" src="images/services-illu/ciko-services-filmorder-illu.svg" alt="Card image cap">
                 <h2 class="card-title">Film igénylés</h2>
                 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">kérj itt</a>
+                <a href="#" class="btn btn-primary btn-lg">kérj itt <i class="fas fa-arrow-right"></i></a>
               </div>
             </div>
-            <div class="card">
-              <img class="card-img-top" src=".../100px200/" alt="Card image cap">
+            <div class="card text-center">
               <div class="card-body">
+                <img class="card-img-top card-img-top--fix-width mb-3" src="images/services-illu/cirko-services-media-illu.svg" alt="Card image cap">
                 <h2 class="card-title">Sajtóanyagok</h2>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <a href="#" class="btn btn-primary">töltsd le</a>
+                <a href="#" class="btn btn-primary btn-lg">töltsd le <i class="fas fa-arrow-right"></i></a>
               </div>
             </div>
           </div>
         </section>
         <!-- services-->
-        <section>
+        <section class="section--bm">
           <h1>hírek</h1>
-          <div id="owl-4" class="owl-nav--custom owl-nav"><h6>osszes</h6></div>
+          <div id="owl-4" class="owl-nav--custom owl-nav">
+            <h6>osszes</h6></div>
           <div class="card-deck">
             <div class="owl-four owl-carousel owl-theme owl-custom-nav">
-              <div class="card">
+              <div class="card bg-transparent">
                 <img class="card-img-top" src=".../100px180/" alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">címsor jon ide akar ket soros is lehet ez a blogcimsor</h4>
@@ -163,7 +180,7 @@
                   <p class="card-text"><small class="text-muted">2018. július 20</small></p>
                 </div>
               </div>
-              <div class="card">
+              <div class="card bg-transparent">
                 <img class="card-img-top" src=".../100px180/" alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">címsor jon ide akar ket soros is lehet ez a blogcimsor</h4>
@@ -171,7 +188,7 @@
                   <p class="card-text"><small class="text-muted">2018. július 20</small></p>
                 </div>
               </div>
-              <div class="card">
+              <div class="card bg-transparent">
                 <img class="card-img-top" src=".../100px180/" alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">címsor jon ide akar ket soros is lehet ez a blogcimsor</h4>
@@ -188,19 +205,19 @@
   </main>
   <footer>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
-          <a class="navbar-brand" href="#"><img src="images/cirko-film-brand.svg" alt=""></a>
-            <ul class="navbar-nav mr-auto">
-              <address>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="#"><img src="images/cirko-film-brand.svg" alt=""></a>
+        <ul class="navbar-nav mr-auto">
+          <address>
                 1055 BUDAPEST, BALASSI B. U. 15-17. <br>
-                +36-1-269-1915 | info@CIRKOFILM.HU<br>
+                +36-1-269-1915 | <a href="mailto:info@cirkofilm.hu">info@CIRKOFILM.HU</a><br>
                 Copyright © 2018 CIRKO FILM
               </address>
-            </ul>
-            <a class="btn btn-primary" href="#" role="button">facebook</a>
-            <a class="btn btn-primary" href="#" role="button">youtube</a>
-        </nav>
-      </div>
+        </ul>
+        <a class="btn btn-primary btn-lg" href="#" role="button">facebook <i class="fab fa-facebook"></i></a>
+        <a class="btn btn-primary btn-lg" href="#" role="button">youtube <i class="fab fa-youtube"></i></a>
+      </nav>
+    </div>
     <section class="bg-dark m-0">
       <div class="container">
         <ul class="nav">
@@ -243,7 +260,7 @@
         </ul>
         <ul class="nav">
           <li class="nav-item">
-             <a class="nav-link" href="#">design: varadi</a>
+            <a class="nav-link" href="#">design: varadi</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">develop: farm</a>

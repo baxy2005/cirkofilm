@@ -3,9 +3,10 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 	padding: 0;
+	color: $gray-900 !important;
 }
-section{
-	margin-bottom: 4.5rem;
+.section--bm{
+	padding-bottom: 4.5rem;
 }
 
 
@@ -16,4 +17,14 @@ section{
 	.item {
 		opacity: .7;
 	}
+}
+.main-subpage {
+	margin-top: 5.5rem;
+}
+
+h1, h2, h3 {
+	font-family: $font-primary;
+}
+h1 {
+	border-bottom: 0.25rem solid $dark;
 }

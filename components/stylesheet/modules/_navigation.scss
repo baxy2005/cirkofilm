@@ -7,3 +7,28 @@
 .top-nav {
   transition: background .3s  ease;
 }
+
+.nav--secondary {
+  .nav-link {
+    font-size: 1.375rem;
+    text-transform: uppercase;
+    color: $gray-550;
+  }
+}
+
+.nav-link {
+  text-transform: uppercase;
+}
+
+.navbar--tertiary {
+  padding: 0;
+  .nav-link.disabled {
+    color: $dark !important;
+  }
+}
+.nav--secondary, .navbar--tertiary {
+  .nav-link {
+  color: $gray-550;
+  font-weight: bold;
+  }
+}

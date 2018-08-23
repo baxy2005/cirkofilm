@@ -20,7 +20,7 @@ $(".owl-one").owlCarousel({
    loop:true,
    nav:true,
    lazyLoad:true,
-   navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"]
+   navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"]
 });
 
 $('.owl-two').owlCarousel({
@@ -37,14 +37,14 @@ $('.owl-two').owlCarousel({
         items:4
     },
     1000:{
-        items:5
+        items:4
     }
 },
   nav: true,
   navContainer: '#owl-2',
   loop:true,
   lazyLoad:true,
-  navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"]
+  navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"]
 
 
 });
@@ -56,6 +56,7 @@ $('.owl-four').owlCarousel({
     nav:true,
     nav: true,
     navContainer: '#owl-4',
+    navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"],
     responsive:{
         0:{
             items:1
@@ -68,11 +69,13 @@ $('.owl-four').owlCarousel({
         }
     }
 })
+
 $('.owl-three').owlCarousel({
     loop:true,
     nav:true,
     nav: true,
     navContainer: '#owl-3',
+    navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"],
     responsive:{
         0:{
             items:1
@@ -82,6 +85,40 @@ $('.owl-three').owlCarousel({
         },
         1000:{
             items:1
+        }
+    }
+})
+$('.owl-dates').owlCarousel({
+    loop:false,
+    nav: true,
+    margin:4,
+    navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"],
+    responsive:{
+        0:{
+            items:1.5
+        },
+        600:{
+            items:5.5
+        },
+        1000:{
+            items:7
+        }
+    }
+})
+$('.owl-hours').owlCarousel({
+    loop:false,
+    nav: true,
+    margin:4,
+    navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"],
+    responsive:{
+        0:{
+            items:1.5
+        },
+        600:{
+            items:5.5
+        },
+        1000:{
+            items:6.5
         }
     }
 })
@@ -112,11 +149,23 @@ var ourScene = new ScrollMagic.Scene({
 /*-------------------------------------------
     carousel bg
 -------------------------------------------*/
-$('.owl-one .item source').each(function() {
-	var imgSrc = $(this).attr('data-srcset');
-	$(this).parent().parent().css({'background-image': 'url('+imgSrc+')'});
-	$(this).remove();
-});
+// $('.owl-one .item .owl-lazy').each(function() {
+// 	var imgSrc = $(this).attr('src');
+// 	$(this).parent().parent().css({'background-image': 'url('+imgSrc+')'});
+// 	$(this).remove();
+// });
+
+  // $('.nav-tabs').responsiveTabs();
+
+  $('.nav-link').on('click', function() {
+     $('.nav-link').removeClass('active');
+  	if ($(this).hasClass('active')) {
+  		  $(this).css('border', '3px solid red').removeClass('active');
+
+    }else {
+      $(this).addClass('show')
+    }
+  });
 
 
 });

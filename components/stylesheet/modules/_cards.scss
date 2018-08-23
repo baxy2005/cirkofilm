@@ -9,3 +9,49 @@
   background-color: transparent;
   padding: 0;
 }
+.card--horizontal {
+  .card-body {
+    padding: 0;
+    h2 {
+      margin-bottom: 0;
+    }
+    P{
+      margin-bottom: .1rem;
+    }
+  }
+}
+.card-img-top--fix-width {
+  width: auto;
+}
+
+.card--arrow {
+  .card-body, .card-footer {
+    align-self: center;
+    border: none
+  }
+  .card-footer {
+    padding: 0
+  }
+}
+
+.card--lists {
+  .card-title, .card-text {
+    margin-bottom: 0;
+  }
+  .inline-title{
+    // display: inline-block;
+    @include flexContainer (column, flex-start, center);
+    @include media-breakpoint-up(lg){
+		@include flexContainer (row, center, flex-start,);
+	};
+  }
+  .card-title {
+    margin-right: .5rem;
+  }
+}
+.card--dates {
+  .card-body.d-flex {
+    overflow: auto;
+  }
+  border-bottom: solid 2px $gray-300;
+}

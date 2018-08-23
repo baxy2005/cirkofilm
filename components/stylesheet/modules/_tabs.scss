@@ -1,0 +1,48 @@
+.card-header-tabs {
+  margin: 0;
+  background-color: $gray-200;
+  border: none;
+  .nav-link.active {
+    border: none;
+    border-radius: 0;
+    margin-bottom: -2px;
+    height: 100%;
+    color: $gray-900;
+    font-weight: bold;
+  }
+  .nav-link {
+    text-align: center;
+    font-size: 1.75rem;
+    color: $gray-550;
+    line-height: 105%;
+    border: 0;
+    background-color: $gray-450;
+    border-radius: 0;
+    .small {
+      display: block;
+      text-transform: lowercase;
+      font-size: 0.875rem;
+      margin-top: -0.3rem;
+      opacity: .6;
+    }
+    .nav-item {
+      margin-bottom: 0px;
+    }
+  }
+  // .nav-item {
+  //   flex: 1;
+  //   margin-bottom: 0px;
+  //   border-right: 2px solid $gray-200;
+  //   border-left: 2px solid $gray-200;
+  //   &:last-child {
+  //     border-right: none;
+  //   }
+  //   &:first-child {
+  //     border-right: none;
+  //     border-left: none;
+  //   }
+  //   &:nth-of-type(2) {
+  //     border-left: none;
+  //   }
+  // }
+}

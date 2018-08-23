@@ -1,0 +1,13 @@
+.btn {
+  font-family: $font-primary;
+}
+.btn-primary {
+  font-size: 1rem;
+  color: inherit;
+  background-color: $white;
+  border-color: $light;
+  i {
+    font-size: 1.6rem;
+    color: $red
+  }
+}

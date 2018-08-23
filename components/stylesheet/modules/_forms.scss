@@ -1,0 +1,23 @@
+.form-control--no-border {
+  border: none;
+  border-radius: 0;
+  font-family: $font-primary;
+  font-size: 2.5rem !important;
+}
+.form-inline--border-bottom {
+  border-bottom: 4px solid $gray-200;
+}
+
+
+.custom-select--gray {
+  border: none;
+  border-radius: 0;
+  background-color: $gray-450;
+  position: relative;
+  color: $gray-550;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1rem 1.75rem 1rem .75rem;
+  height: unset;
+
+}

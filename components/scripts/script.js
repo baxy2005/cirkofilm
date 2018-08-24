@@ -90,38 +90,29 @@ $('.owl-three').owlCarousel({
 })
 $('.owl-dates').owlCarousel({
     loop:false,
-    nav: true,
+    nav: false,
+    dots: false,
     margin:4,
     navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"],
     responsive:{
         0:{
             items:1.5
         },
-        600:{
+        576:{
+            items:2.5
+        },
+        768:{
+            items:4.5
+        },
+        992:{
             items:5.5
         },
-        1000:{
+        1200:{
             items:7
         }
     }
 })
-$('.owl-hours').owlCarousel({
-    loop:false,
-    nav: true,
-    margin:4,
-    navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"],
-    responsive:{
-        0:{
-            items:1.5
-        },
-        600:{
-            items:5.5
-        },
-        1000:{
-            items:6.5
-        }
-    }
-})
+
 
 
 /*-------------------------------------------

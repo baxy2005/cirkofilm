@@ -50,8 +50,28 @@
   }
 }
 .card--dates {
+  .col-auto {
+        flex: 0 1 auto;
+  }
+  margin-bottom: .7rem;
+  padding-bottom: .7rem;
+  .card-header, .card-body {
+    padding: 0;
+  }
+  .card-body {
+    margin-left: -.35rem;
+    margin-right: -.35rem;
+  }
+  .card-header{
+    margin-bottom: .7rem;
+    background-color: white;
+    border:none;
+  }
   .card-body.d-flex {
     overflow: auto;
   }
   border-bottom: solid 2px $gray-300;
+}
+.card--dates:last-child {
+  border-bottom: none;
 }

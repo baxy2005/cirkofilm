@@ -1,0 +1,18 @@
+.nav--credit {
+  .nav-link {
+    text-transform: lowercase;
+    color: rgba(245, 245, 245, 0.3);
+    font-size: .875rem;
+  }
+}
+
+.nav--white {
+  height: 6rem;
+  align-items: center;
+  .nav-link {
+    color: $gray-200;
+  }
+}
+.bg-gray-2 {
+  color: $gray-800;
+}

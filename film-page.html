@@ -8,7 +8,6 @@
   <title>CIRKO FILM</title>
   <!-- plugins css bootstrap owl-carousel etc.. -->
   <link rel="stylesheet" href="css/plugin-min.css">
-  <link rel="stylesheet" href="css/offcanvas.css">
   <link rel="stylesheet" href="css/all.css">
   <!-- my css style -->
   <link rel="stylesheet" href="css/style.css">
@@ -148,10 +147,10 @@
         </section>
         <!-- prew -->
         <section class="section--bm bg-light">
-          <h1>Vetítések</h1>
+          <h1 class="m-0">Vetítések</h1>
           <div class="card">
             <div class="card-header bg-light border-bottom-0 p-0">
-              <form class="mb-1">
+              <form class="mb-1 form--ticket">
                 <div class="d-flex  flex-column flex-md-row no-gutters">
                   <div class="col-md-6">
                     <select class="custom-select custom-select--gray" id="inlineFormCustomSelectPref">
@@ -162,7 +161,7 @@
                     </select>
                   </div>
                   <div class="col-md-6">
-                    <select class="custom-select custom-select--gray" id="inlineFormCustomSelectPref">
+                    <select class="custom-select custom-select--gray" id="inlineFormCustomSelectPref-2">
                       <option selected>Buda Bed Cinema - Ágymozi</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -197,17 +196,17 @@
                 </div>
               </ul>
             </div>
-            <div class="card-body">
+            <div class="card-body p-5">
               <div class="tab-content tab-content--main responsive">
                 <div class="tab-pane fade show active" id="01" role="tabpanel">
                   <div class="card card--dates">
-                    <div class="card-header bg-white border-0">
-                      <div class="row">
-                      <div class="col-md-9">
+                    <div class="card-header">
+                      <div class="row justify-content-between align-items-center">
+                      <div class="col-auto">
                         <h2>Buda Bed Cinema - Ágymozi</h2>
                       </div>
-                      <div class="col-md-3">
-                        <a href="#" class="btn btn-primary">jegyvásárlás</a>
+                      <div class="col-auto">
+                        <a href="#" class="btn btn-primary btn-lg"><i class="fas fa-ticket-alt"></i>jegyvásárlás</a>
                       </div>
                     </div>
                     </div>
@@ -219,13 +218,13 @@
                     </div>
                   </div>
                   <div class="card card--dates">
-                    <div class="card-header bg-white border-0">
-                      <div class="row">
-                      <div class="col-md-9">
+                    <div class="card-header">
+                      <div class="row justify-content-between align-items-center">
+                      <div class="col-auto">
                         <h2>Cirko-Gejzír</h2>
                       </div>
-                      <div class="col-md-3">
-                        <a href="#" class="btn btn-primary">jegyvásárlás</a>
+                      <div class="col-auto">
+                        <a href="#" class="btn btn-primary btn-lg"><i class="fas fa-ticket-alt"></i>jegyvásárlás</a>
                       </div>
                     </div>
                     </div>
@@ -235,13 +234,13 @@
                     </div>
                   </div>
                   <div class="card card--dates">
-                    <div class="card-header bg-white border-0">
-                      <div class="row">
-                      <div class="col-md-9">
+                    <div class="card-header">
+                      <div class="row justify-content-between align-items-center">
+                      <div class="col-auto">
                         <h2>Művész mozi</h2>
                       </div>
-                      <div class="col-md-3">
-                        <a href="#" class="btn btn-primary">jegyvásárlás</a>
+                      <div class="col-auto">
+                        <a href="#" class="btn btn-primary btn-lg"><i class="fas fa-ticket-alt"></i> jegyvásárlás</a>
                       </div>
                     </div>
                     </div>
@@ -272,23 +271,23 @@
             </div>
           </div>
         </section><!--schedule -->
-        <section>
-          <!-- <div class="row">
-            <div class="col-md-8">
-              <img src="images/posters/cirko-movie-prev.png" alt="">
+        <section class="poster">
+          <div class="row no-gutters">
+            <div class="col-auto">
+              <img class="w-100" src="images/posters/cirko-movie-prev.png" alt="">
             </div>
-            <div class="col-md-4">
-              <img src="images/posters/cirko-a-naplemente-ragyogasa.jpg" alt="">
+            <div class="col-auto">
+              <img class="w-100" src="images/posters/cirko-a-naplemente-ragyogasa.png" alt="">
             </div>
-          </div> -->
-          <div class="card-deck no-gutters">
+          </div>
+          <!-- <div class="card-deck no-gutters">
             <div class="card">
               <img class="card-img-top" src="images/posters/cirko-movie-prev.png" alt="Card image cap">
             </div>
             <div class="card">
-              <img class="card-img-top" src="images/posters/cirko-a-naplemente-ragyogasa.jpg" alt="Card image cap">
+              <img class="card-img-top" src="images/posters/cirko-a-naplemente-ragyogasa.png" alt="Card image cap">
             </div>
-          </div>
+          </div> -->
         </section>
       </div><!--container -->
       <section class="section--bm bg-light">
@@ -298,6 +297,7 @@
               <source class="owl-lazy" media="(min-width: 650px)" data-srcset="images/gallery-carousel/cirko-film-carousel-03-large-prev.jpg">
               <source class="owl-lazy" media="(min-width: 350px)" data-srcset="images/gallery-carousel/cirko-film-carousel-03-medium-prev.jpg">
               <img class="owl-lazy" data-src="images/gallery-carousel/cirko-film-carousel-03-fallback-prev.jpg" alt="">
+            </picture>
           </div>
           <div class="item">
             <picture>
@@ -404,7 +404,7 @@
     </div>
     <section class="bg-dark m-0">
       <div class="container">
-        <ul class="nav">
+        <ul class="nav nav--white">
           <li class="nav-item">
             <a class="nav-link active" href="#">FILMEK</a>
           </li>
@@ -430,7 +430,7 @@
       </div>
     </section>
     <section class="bg-dark m-0">
-      <div class="container d-flex justify-content-between">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link active" href="#">Impresszum</a>
@@ -442,7 +442,7 @@
             <a class="nav-link" href="#">Adatvédelmi nyilatkozat</a>
           </li>
         </ul>
-        <ul class="nav">
+        <ul class="nav nav--credit">
           <li class="nav-item">
             <a class="nav-link" href="#">design: varadi</a>
           </li>
@@ -455,7 +455,6 @@
   </footer>
   <!-- plugins js bootstrap owl-carousel etc.. -->
   <script src="js/plugin-min.js"></script>
-  <script src="js/offcanvas.js"></script>
   <!-- my js script -->
   <script src="js/script.js"></script>
 </body>

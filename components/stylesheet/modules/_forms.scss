@@ -21,3 +21,14 @@
   height: unset;
 
 }
+
+
+.form--ticket {
+  @include noGutter (-2px, 2px);
+  .col-md-6:first-child .custom-select--gray {
+    margin-bottom: 0.25rem;
+    @include media-breakpoint-up (md) {
+      margin-bottom: 0rem;
+    };
+  }
+}

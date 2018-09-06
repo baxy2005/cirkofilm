@@ -1,6 +1,10 @@
 .owl-nav--custom {
+  height: 3rem;
   h6 {
-    margin: 0
+    margin: 0;
+    color: $gray-600;
+    font-weight: bold;
+    margin-right: .5rem;
   }
   @include flexContainer(row, center, flex-end);
   .owl-prev {
@@ -12,20 +16,51 @@
   .owl-next, .owl-prev {
     background: transparent;
     border: 0;
-    font-size: 2em;
+    font-size: 1.6em;
+    padding: 0 .2rem;
+    color: $gray-450;
   }
 }
-.owl-one .item  {
-  height: 600px;
-  width: 100%;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
+.owl-one {
+  .item  {
+    height: 640px;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+  }
+  .owl-dots {
+    position: absolute;
+    bottom: .8rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    .owl-dot {
+      display: inline-block;
+      span {
+        width: .9rem;
+        height: .9rem;
+        margin: 5px .3rem;
+        background: rgba(255,255,255, 0.4);
+        display: block;
+        -webkit-backface-visibility: visible;
+        transition: opacity .2s ease;
+        border-radius: 30px;
+      }
+    }
+    .owl-dot.active {
+      span {
+        background: $primary;
+      }
+    }
+  }
 }
 .owl-lazy  {
-  height: 600px;
+  height: 640px;
   background-size: cover;
   background-position: center;
+  opacity: .85!important;
 }
 
 .owl-one--gallery {
@@ -33,3 +68,52 @@
     height: auto;
   }
 }
+
+/*-------------------------------------------
+ sponsors  ScrollMagic
+-------------------------------------------*/
+
+.owl-carousel.off {
+    display: flex;
+		flex-wrap: wrap;
+
+}
+
+#owl_about_main_slider-2 .card-body{
+  background-color: white;
+  margin-bottom: 2px;
+  @include flexContainer(row, center, center);
+  padding: 1.5rem;
+  @include media-breakpoint-up(sm) {
+    padding: 2.5rem ;
+  };
+  @include media-breakpoint-up(xl) {
+    padding: 3.5rem ;
+  };
+  a{
+    filter: grayscale(100%);
+    @include hover-focus {
+      filter: grayscale(0);
+    }
+  }
+}
+.owl-carousel  {
+  .owl-stage-outer {
+    height: 100% !important
+  }
+  .owl-stage {
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%
+  }
+  .owl-item {
+      display: flex;
+       height: 100% !important;
+
+  }
+}
+
+// .owl-carousel .owl-item .card {
+//     width: auto;
+//     height: 100%;
+// }

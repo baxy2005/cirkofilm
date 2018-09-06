@@ -1,5 +1,7 @@
 .btn {
   font-family: $font-primary;
+
+
 }
 .btn-primary {
   font-size: 1rem;
@@ -10,4 +12,41 @@
     font-size: 1.6rem;
     color: $red
   }
+}
+.btn-sign {
+  border: none;
+  display: flex;
+  i {
+    font-size: 2.125rem;
+  }
+}
+
+.btn-info {
+    background-color: transparent;
+    border-color: transparent;
+    display: flex;
+    opacity: .5;
+    padding: 1rem 0;
+    i {
+      margin-right: .5rem;
+      font-size: 1.5rem
+    }
+    @include hover-focus-active {
+      opacity: 1;
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
+    };
+}
+.btn-muted {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border: 3px solid rgba(255, 255, 255, .4);
+  @include hover-focus {
+    border-color: rgba(255, 255, 255, 1);
+    color: white;
+  };
 }

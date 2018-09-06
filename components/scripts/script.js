@@ -2,15 +2,16 @@ $(document).ready(function() {
 
 
 $(".owl-one").owlCarousel({
-   navigation : true, // Show next and prev buttons
+   navigation : false, // Show next and prev buttons
    slideSpeed : 500,
    margin:1,
    paginationSpeed : 400,
    autoplay:false,
    items : 1,
+   dots: true,
    responsive:{
     0:{
-        items:1.1
+        items:1.1,
     },
     576:{
         items:1,
@@ -18,7 +19,7 @@ $(".owl-one").owlCarousel({
     }
 },
    loop:true,
-   nav:true,
+   nav:false,
    lazyLoad:true,
    navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"]
 });
@@ -26,17 +27,17 @@ $(".owl-one").owlCarousel({
 $('.owl-two').owlCarousel({
   navigation : false, // Show next and prev buttons
   slideSpeed : 500,
-  margin:1,
+  margin:12,
   autoplay:false,
   items : 1,
   responsive:{
     0:{
         items:1
     },
-    600:{
-        items:4
+    768:{
+        items:2
     },
-    1000:{
+    992:{
         items:4
     }
 },
@@ -74,17 +75,39 @@ $('.owl-three').owlCarousel({
     loop:true,
     nav:true,
     nav: true,
+    margin:12,
+    dots: false,
     navContainer: '#owl-3',
     navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"],
     responsive:{
         0:{
             items:1
         },
-        600:{
+        768:{
             items:1
         },
-        1000:{
+        992:{
+            items:2
+        }
+    }
+})
+$('.owl-five').owlCarousel({
+    loop:true,
+    nav:true,
+    nav: true,
+    margin: 0,
+    // autoHeight: true,
+    navContainer: '#owl-13',
+    navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"],
+    responsive:{
+        0:{
             items:1
+        },
+        768:{
+            items:2
+        },
+        992:{
+            items:3
         }
     }
 })
@@ -92,6 +115,7 @@ $('.owl-dates').owlCarousel({
     loop:false,
     nav: false,
     dots: false,
+    mouseDrag:false,
     margin:4,
     navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"],
     responsive:{
@@ -157,6 +181,74 @@ var ourScene = new ScrollMagic.Scene({
       $(this).addClass('show')
     }
   });
+  /*-------------------------------------------
+   sponsors  ScrollMagic
+  -------------------------------------------*/
+
+  $('#owl_about_main_slider-2').owlCarousel({
+      loop:false,
+      nav: false,
+      dots: false,
+      margin:4,
+      navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"],
+      responsive:{
+          0:{
+              items:1.5
+          },
+          576:{
+              items:2
+          },
+          768:{
+              items:3
+          },
+          992:{
+              items:4
+          },
+          1200:{
+              items:6
+          }
+      }
+  })
+
+//
+//   if ( $(window).width() < 576 ) {
+//     startCarousel();
+//   } else {
+//     $('.owl-dis').addClass('off');
+//   }
+//
+//   function startCarousel(){
+//   $(".owl-carousel").owlCarousel({
+//      navigation : true, // Show next and prev buttons
+//      slideSpeed : 500,
+//      margin:0,
+//      paginationSpeed : 400,
+//      autoplay:false,
+//      items : 1.5,
+//      itemsDesktop : false,
+//      itemsDesktopSmall : false,
+//      itemsTablet: false,
+//      itemsMobile : false,
+//      loop:true,
+//      nav:false,
+//      // navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"]
+//   });
+// }
+// function stopCarousel() {
+//   var owl = $('.owl-dis');
+//   owl.trigger('destroy.owl.carousel');
+//   owl.addClass('off');
+// }
+//
+// $(window).resize(function() {
+//     if ( $(window).width() < 576 ) {
+//       $('.owl-dis').removeClass('off');
+//       startCarousel();
+//     } else {
+//       stopCarousel();
+//     }
+// });
+
 
 
 });

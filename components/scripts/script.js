@@ -249,6 +249,15 @@ var ourScene = new ScrollMagic.Scene({
 //     }
 // });
 
+function prepareLazyCarousel($element_name) {
+          return $($element_name).each(function() {
+              var imgSrc = $(this).attr('src');
+              $(this).parent().css({'background-image': 'url('+imgSrc+')'});
+              $(this).parent().attr('data-src', imgSrc);
+              $(this).remove();
+          });
+      }
 
+      prepareLazyCarousel('.card-img-wrapper .card-img-top');
 
 });

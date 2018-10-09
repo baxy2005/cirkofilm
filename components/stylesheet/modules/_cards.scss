@@ -45,6 +45,11 @@
   .d-flex, .card-body {
     height: 100%
   }
+  p {
+    font-family: $font-secondary-condens;
+    color: $gray-550;
+    line-height: 1.3rem;
+  }
 }
 
 .card--lists {
@@ -60,6 +65,111 @@
   }
   .card-title {
     margin-right: .5rem;
+  }
+}
+.card--list {
+  .card-body {
+    height: auto;
+    // padding: 1.066rem;
+    padding: .3rem;
+    flex: 1 1 20%;
+    p {
+      margin-bottom: .5rem;
+      margin-top: -.2rem;
+    }
+  }
+  .d-flex {
+    height: auto;
+  }
+  // .col {
+  //   @include flexContainer (column, center, center);
+  // }
+  .card-img-wrapper {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    min-height: 12.5rem;
+    @include media-breakpoint-up(sm) {
+    min-height: 17.125rem;
+    };
+    @include media-breakpoint-up(lg) {
+      min-height: 8.6rem;
+    };
+  }
+}
+
+.control-date {
+  display: flex;
+  align-items: center;
+  max-width: 105px;
+  border-right: solid 4px  $gray-200;
+  margin-right: 1.875rem;
+}
+.card-group--icons {
+  margin: 1rem 0;
+  flex-direction: row;
+  margin-bottom: 0;
+  @include media-breakpoint-up(lg) {
+    margin: 0;
+  };
+
+  .card--icons:first-child {
+      border-right: 4px solid $gray-200;
+  }
+  .card--icons:last-child {
+      border-left: 4px solid $gray-200;
+  }
+
+}
+.card--date {
+  span {
+    font-size: 0.8125rem;
+    display: block;
+    font-family: $font-secondary;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .card-body {
+    padding: 0;
+    align-self: flex-start;
+    h2 {
+    font-family: $font-secondary;
+    font-size: 4rem;
+    line-height: 56px;
+    }
+  }
+}
+.card--icons {
+  .card-body {
+    @include flexContainer (column, center, center);
+    @include media-breakpoint-between(sm, md) {
+      @include flexContainer (row, center, center);
+    };
+    h6 {
+      font-family: $font-secondary-condens;
+      color: $gray-550;
+      margin-bottom: 0;
+      font-size: 0.9375rem;
+      display: none;
+      @include media-breakpoint-up(sm) {
+        display: block;
+      };
+    }
+    i {
+      font-size: 2.5rem;
+      margin-bottom: 0rem;
+      margin-right: 0rem;
+      @include media-breakpoint-up(sm) {
+        margin-bottom: .5rem;
+        margin-right: .5rem;
+        font-size: 1.5rem;
+
+      };
+      @include media-breakpoint-up(lg) {
+        font-size: 3.5rem;
+        margin-right: 0rem;
+      };
+    }
   }
 }
 .card--dates {
@@ -85,6 +195,42 @@
   }
   border-bottom: solid 2px $gray-300;
 }
+.card--vod.col-lg-3 {
+  @include media-breakpoint-up(lg) {
+    flex: 0 0 16.6666667%;
+  };
+}
+.card--vod {
+  background: transparent;
+  .card-body {
+    padding-bottom: 0;
+    background-color: white;
+  }
+  .card-footer {
+    font-size: 1.25rem;
+    font-family: $font-secondary-condens;
+    font-weight: bold;
+    padding-top: 0;
+    i {
+      margin-right: .4rem
+    }
+    .fa-star {
+      color: $yellow;
+    }
+    .btn-sm {
+      font-size: .8125rem;
+      margin-top: .3rem;
+      i {
+        font-size: 1.23rem;
+      }
+    }
+  }
+  h6 {
+    font-family: $font-secondary-condens;
+    font-weight: bold;
+  }
+}
+
 .card--dates:last-child {
   border-bottom: none;
 }
@@ -97,7 +243,7 @@
   position: absolute;
   bottom: 17%;
   border-left: solid $red 6px;
-  border-right: solid red 6px;
+  border-right: solid $red 6px;
   z-index: 66;
   .card-body, .card-footer {
     padding-top: 0;
@@ -115,7 +261,8 @@
   }
   h1 {
     border-bottom: 0px;
-    margin-bottom: 0
+    margin-bottom: 0;
+    margin-top: -1rem;
   }
   .card-text {
     color: rgba( 255,255,255, 0.6);

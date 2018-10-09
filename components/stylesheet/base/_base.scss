@@ -23,12 +23,20 @@ body{
 	margin-top: 5.5rem;
 }
 
-h1, h2, h3 {
+h1, h2, h3, .display-3 {
 	font-family: $font-primary;
+	text-transform: uppercase;
+	font-weight: 900;
 }
 h1 {
 	border-bottom: 0.25rem solid $dark;
 }
+.display-3 {
+	letter-spacing: -2px;
+}
+// h3, h2 {
+// 	letter-spacing: -1px;
+// }
 .poster {
 	@include noGutter (-4px, 4px);
 	.col-auto:first-child {

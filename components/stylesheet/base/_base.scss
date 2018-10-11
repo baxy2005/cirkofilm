@@ -23,7 +23,7 @@ body{
 	margin-top: 5.5rem;
 }
 
-h1, h2, h3, .display-3 {
+h1, h2, h3, .display-3, h5, h6 {
 	font-family: $font-primary;
 	text-transform: uppercase;
 	font-weight: 900;
@@ -53,4 +53,11 @@ h1 {
 		};
 	}
 	padding-bottom: 3rem;
+}
+
+.container--top {
+	.row {
+		min-height: 16.5rem;
+		align-items: center;
+	}
 }

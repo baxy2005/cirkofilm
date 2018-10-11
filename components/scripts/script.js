@@ -111,6 +111,23 @@ $('.owl-five').owlCarousel({
         }
     }
 })
+$('.owl-six').owlCarousel({
+    loop:true,
+    nav:true,
+    nav: true,
+    margin: 12,
+    // autoHeight: true,
+    navContainer: '#owl-13',
+    navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"],
+    responsive:{
+        0:{
+            items:2
+        },
+        992:{
+            items:3
+        }
+    }
+})
 $('.owl-dates').owlCarousel({
     loop:false,
     nav: false,

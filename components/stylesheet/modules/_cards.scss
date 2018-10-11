@@ -202,14 +202,19 @@
 }
 .card--vod {
   background: transparent;
+  margin-bottom: 1.875rem;
   .card-body {
     padding-bottom: 0;
     background-color: white;
+  }
+  .card-footer:last-child  {
+    border-radius: 0;
   }
   .card-footer {
     font-size: 1.25rem;
     font-family: $font-secondary-condens;
     font-weight: bold;
+    padding: 1.25rem;
     padding-top: 0;
     i {
       margin-right: .4rem
@@ -230,6 +235,29 @@
     font-weight: bold;
   }
 }
+.card--news {
+  background: transparent;
+  margin-bottom: 1rem;
+  .card-body, .card-footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  h4 {
+    font-family: $font-secondary-condens;
+    text-transform: uppercase;
+  }
+  p:last-child {
+    margin-bottom: 0
+  }
+  .card-footer {
+    font-weight: bold;
+  }
+  p, .card-footer {
+    font-size: 0.875rem;
+    color: $gray-600;
+  }
+}
+
 
 .card--dates:last-child {
   border-bottom: none;
@@ -273,5 +301,31 @@
   height: 100%;
   .card {
     // height: 100%;
+  }
+}
+.card-deck {
+  .card--order {
+    margin-left: 0;
+    margin-right: 0;
+    .card-body {
+      padding: .5rem .5rem 0 .5rem;
+    .card-title {
+      font-size: 0.875rem;
+      margin-bottom: 0;
+      }
+    }
+    .card-footer {
+      .btn-sign i {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+.card--wraper-order {
+  border: 3px solid $gray-200;
+  padding: 0.75rem;
+  h5 {
+    margin-bottom: 0;
+    border-bottom: 0.2rem solid $dark;
   }
 }

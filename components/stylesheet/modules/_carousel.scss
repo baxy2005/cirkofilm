@@ -21,6 +21,14 @@
     color: $gray-450;
   }
 }
+.owl-nav--order {
+  .owl-next, .owl-prev {
+    font-size: 1.3em;
+  }
+  h6 {
+    font-size: .875rem;
+  }
+}
 .owl-one {
   .item  {
     height: 640px;

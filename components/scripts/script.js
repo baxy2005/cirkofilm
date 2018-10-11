@@ -116,6 +116,7 @@ $('.owl-six').owlCarousel({
     nav:true,
     nav: true,
     margin: 12,
+    dots: false,
     // autoHeight: true,
     navContainer: '#owl-13',
     navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"],

@@ -307,8 +307,14 @@
   .card--order {
     margin-left: 0;
     margin-right: 0;
+    .btn-sign {
+      padding: 0rem;
+    }
+    .card-img-top {
+      margin-bottom: 0.5rem;
+    }
     .card-body {
-      padding: .5rem .5rem 0 .5rem;
+      padding: 0;
     .card-title {
       font-size: 0.875rem;
       margin-bottom: 0;

@@ -56,16 +56,19 @@ $('.owl-four').owlCarousel({
     loop:true,
     nav:true,
     nav: true,
+    margin: 12,
     navContainer: '#owl-4',
     navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"],
     responsive:{
         0:{
-            items:1
+            items:1.2
+
         },
-        600:{
-            items:3
+        554:{
+            items:2,
+            margin: 0
         },
-        1000:{
+        992:{
             items:3
         }
     }
@@ -96,15 +99,18 @@ $('.owl-five').owlCarousel({
     nav:true,
     nav: true,
     margin: 0,
+    dots: false,
     // autoHeight: true,
     navContainer: '#owl-13',
     navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"],
     responsive:{
         0:{
-            items:1
+            items:1.2,
+            margin: 12
         },
-        768:{
-            items:2
+        554:{
+            items:2,
+            margin: 0
         },
         992:{
             items:3

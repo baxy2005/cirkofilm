@@ -9,7 +9,13 @@
   background-color: transparent;
   padding: 0;
   h6 {
-    margin-bottom: 0
+    margin-bottom: 0;
+    font-family: $font-secondary-condens;
+    text-transform: none;
+  }
+  .card-body {
+    padding: .5rem 1.25rem 0rem 1.25rem;
+    text-align: center;
   }
 }
 .card--mix-grid:first-child {
@@ -49,6 +55,13 @@
     font-family: $font-secondary-condens;
     color: $gray-550;
     line-height: 1.3rem;
+  }
+  .card-title {
+    margin-bottom: 0;
+  }
+  .card-body {
+    padding: 1.875rem;
+    text-align: left;
   }
 }
 
@@ -334,4 +347,60 @@
     margin-bottom: 0;
     border-bottom: 0.2rem solid $dark;
   }
+}
+.card--banner {
+  min-height: 4rem;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1rem;
+  transition: 1s all ease;
+  .card-body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: .5rem;
+    @include media-breakpoint-up(sm) {
+      flex-direction: row;
+      padding: 0;
+    };
+    .card-img-top {
+      width: 135px;
+      height: auto;
+      margin-bottom: .5rem;
+      @include media-breakpoint-up(sm) {
+          width: 95px;
+        margin-bottom: 0;
+      };
+    }
+    .btn-primary i {
+      font-size: 1rem;
+    }
+  }
+  h5 {
+    font-family: $font-secondary-condens;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+    @include media-breakpoint-up(sm) {
+      font-size: 1rem;
+      margin-bottom: 0;
+    };
+    @include media-breakpoint-up(md) {
+      font-size: 1.375rem;
+    };
+
+    span {
+      color: $gray-550;
+    }
+  }
+  .card-footer {
+    color: $gray-400;
+  }
+}
+.card--banner-close {
+   min-height: 0;
+    height: 0;
+    overflow: hidden;
 }

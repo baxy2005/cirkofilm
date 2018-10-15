@@ -7,7 +7,10 @@ body{
 	font-family: $font-secondary;
 }
 .section--bm{
-	padding-bottom: 4.5rem;
+	padding-bottom: 2rem;
+	@include media-breakpoint-up (md) {
+		padding-bottom: 4.5rem;
+	};
 }
 
 
@@ -59,5 +62,19 @@ h1 {
 	.row {
 		min-height: 16.5rem;
 		align-items: center;
+	}
+}
+.shadow {
+	box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.24) !important
+}
+
+.container-fluid.bg-light {
+	.container {
+		padding-left: 0px;
+		padding-right: 0px;
+		@include media-breakpoint-up (md) {
+			padding-right: 15px;
+			padding-left: 15px;
+		};
 	}
 }

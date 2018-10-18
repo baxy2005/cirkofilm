@@ -1,13 +1,38 @@
 .navbar {
   width: 100%;
+  @include media-breakpoint-up (sm) {
+  padding:   .5rem 0rem;
+  };
   .navbar-brand {
     opacity: .7;
   }
 }
 .top-nav {
   transition: background .3s  ease;
+  // padding-left: 0;
+  // padding-right: 0;
+  // @include media-breakpoint-up (sm) {
+  //   padding-left: 15px;
+  //   padding-right: 15px;
+  // };
+  // .container {
+  //   padding-left: 0;
+  //   padding-right: 0;
+  //   @include media-breakpoint-up (sm) {
+  //     padding-left: 15px;
+  //     padding-right: 15px;
+  //   };
+  // }
 }
+.top-nav, .top-nav .container {
+  padding-left: 0;
+  padding-right: 0;
+  @include media-breakpoint-up (sm) {
+    padding-left: 15px;
+    padding-right: 15px;
+  };
 
+}
 .nav--secondary {
   .nav-link {
     font-size: 1.375rem;

@@ -34,12 +34,15 @@
 }
 .owl-one {
   .item  {
-    height: 640px;
+    height: 100vh;
     width: 100%;
     overflow: hidden;
     background-size: cover;
     background-position: center;
     background-color: black;
+    @include media-breakpoint-up(sm) {
+      height: 640px;
+    };
   }
   .owl-dots {
     position: absolute;
@@ -68,10 +71,13 @@
   }
 }
 .owl-lazy  {
-  height: 640px;
+  height: 100vh;
   background-size: cover;
   background-position: center;
   opacity: .85!important;
+  @include media-breakpoint-up (sm) {
+    height: 640px;
+  };
 }
 
 .owl-one--gallery {

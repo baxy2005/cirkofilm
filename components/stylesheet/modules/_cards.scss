@@ -1,3 +1,8 @@
+.card-footer {
+  background-color: transparent;
+  border: none;
+}
+
 .card {
   border: none;
   border-radius: 0;
@@ -22,8 +27,11 @@
   margin-right: 6px
 }
 .card--mix-grid:last-child {
-  padding-left: 24px;
+  padding-left: 0;
   margin-left: 0;
+  @include media-breakpoint-up (sm) {
+    padding-left: 24px;
+  };
 }
 .card--horizontal {
   .card-body {
@@ -60,8 +68,11 @@
     margin-bottom: 0;
   }
   .card-body {
-    padding: 1.875rem;
+    padding: 1rem;
     text-align: left;
+    @include media-breakpoint-up (md) {
+      padding: 1.875rem;
+    };
   }
 }
 
@@ -264,6 +275,7 @@
   }
   .card-footer {
     font-weight: bold;
+    border-top: 1px solid $gray-450;
   }
   p, .card-footer {
     font-size: 0.875rem;
@@ -282,13 +294,24 @@
 
 .card--hero {
   position: absolute;
-  bottom: 17%;
+  bottom: 9%;
   border-left: solid $red 6px;
   border-right: solid $red 6px;
   z-index: 66;
+  left: 1rem;
+  right: 1rem;
+  @include media-breakpoint-up (sm) {
+    left: auto;
+    right: auto;
+  };
+  // @include media-breakpoint-up(md) {
+  //   bottom: 17%;
+  // };
   .card-body, .card-footer {
     padding-top: 0;
     padding-bottom: 0;
+    padding-left: .75rem;
+    padding-right: .75rem;
   }
   .card-body {
     padding-bottom: 1rem;
@@ -303,7 +326,10 @@
   h1 {
     border-bottom: 0px;
     margin-bottom: 0;
-    margin-top: -1rem;
+    margin-top: -.4rem;
+    @include media-breakpoint-up (sm) {
+      margin-top: -1rem;
+    };
   }
   .card-text {
     color: rgba( 255,255,255, 0.6);
@@ -352,8 +378,11 @@
   min-height: 4rem;
   flex-direction: row;
   align-items: center;
-  margin-top: 1rem;
-  transition: 1s all ease;
+  margin-top: 0rem;
+  transition: 1s background-color ease;
+  @include media-breakpoint-up (sm) {
+    margin-top: 1rem;
+  };
   .card-body {
     display: flex;
     align-items: center;
@@ -367,9 +396,19 @@
       width: 135px;
       height: auto;
       margin-bottom: .5rem;
+      display: none;
       @include media-breakpoint-up(sm) {
           width: 95px;
         margin-bottom: 0;
+        display: block;
+      };
+    }
+    .card-title {
+      padding-left: 0;
+      padding-right: 0;
+      @include media-breakpoint-up(sm) {
+        padding-left: 15px;
+        padding-right: 15px;
       };
     }
     .btn-primary i {
@@ -381,8 +420,8 @@
     text-transform: uppercase;
     margin-bottom: 0;
     text-align: center;
-    font-size: 1.1rem;
     margin-bottom: .5rem;
+    font-size: 1.09rem;
     @include media-breakpoint-up(sm) {
       font-size: 1rem;
       margin-bottom: 0;

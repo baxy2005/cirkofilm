@@ -11,7 +11,7 @@ $(".owl-one").owlCarousel({
    dots: true,
    responsive:{
     0:{
-        items:1.1,
+        items:1,
     },
     576:{
         items:1,
@@ -32,9 +32,9 @@ $('.owl-two').owlCarousel({
   items : 1,
   responsive:{
     0:{
-        items:1
+        items:2.2
     },
-    768:{
+    554:{
         items:2
     },
     992:{
@@ -84,7 +84,10 @@ $('.owl-three').owlCarousel({
     navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>","<i class='fas fa-angle-right' aria-hidden='true'></i>"],
     responsive:{
         0:{
-            items:1
+            items:2.2
+        },
+        554:{
+            items:2
         },
         768:{
             items:1

@@ -28,7 +28,11 @@
     padding-left: 0;
   };
 }
-
+.btn--search {
+  color: $red;
+  font-size: 1.375rem;
+  padding: 0.3rem 1.5rem;
+}
 .btn-info {
     background-color: transparent;
     border-color: transparent;

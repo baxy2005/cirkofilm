@@ -13,6 +13,14 @@ body{
 	};
 }
 
+.section--pt {
+	padding-top: 2rem;
+	@include media-breakpoint-up (md) {
+		padding-top: 4.25rem;
+	};
+
+}
+
 
 .owl-all-device {
 	.owl-item {

@@ -3,7 +3,13 @@
   border-radius: 0;
   font-family: $font-primary;
   font-size: 2.5rem !important;
+  text-transform: uppercase;
+  font-weight: 900;
+  flex: 1 0 auto;
+  width: 100%;
 }
+
+
 .form-inline--border-bottom {
   border-bottom: 4px solid $gray-200;
 }
@@ -48,4 +54,21 @@ label {
   font-weight: bold;
   font-family: $font-secondary-condens;
   margin-bottom: .3rem;
+}
+
+/*-------------------------------------------
+  search form
+-------------------------------------------*/
+
+.container--seach {
+  min-height: 16.5rem;
+  @include flexContainer (column, stretch, center);
+  i {
+    font-size: 2rem;
+    color: $gray-400;
+  }
+  .form-control:focus {
+    box-shadow: none;
+    border: none;
+  }
 }

@@ -57,3 +57,47 @@
   font-weight: bold;
   }
 }
+
+
+.navbar--film-list {
+  padding-right: 0;
+  padding-left: 0;
+  .navbar-toggler {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include media-breakpoint-up (lg) {
+      display: none;
+    };
+  }
+  .navbar-collapse {
+    position: absolute;
+    top: 50px;
+    background: white;
+    width: 100%;
+    z-index: 66;
+    padding: 1rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.175);
+    @include media-breakpoint-up (lg) {
+    position: relative;
+    padding: 0;
+    top: unset;
+    box-shadow: none !important;
+    };
+  }
+  button:focus {
+        outline: none;
+  }
+  .nav-item {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: $font-secondary-condens;
+    .nav-link {
+      color: $gray-550 ;
+    }
+    .nav-link.active {
+      color: $gray-900;
+    }
+  }
+
+}

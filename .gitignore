@@ -38,3 +38,8 @@ components/libs/
 ehthumbs.db
 Thumbs.db
 *.sass-cache*
+
+css/
+package-lock.json
+package.json
+package.json

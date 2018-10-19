@@ -1,3 +1,36 @@
-body {
-    padding-right: 0 !important;
+.modal-noBS {
+    max-width: 400px;
+    padding: 40px;
+    // height: ;
+    background-color: #fff;
+    border: 2px solid #ECECEC;
+    position: fixed;
+    top: -400px;
+    right: calc(50% - 570px);
+    z-index: 5;
+    transition: top ease-in .4s;
+    pointer-events: none;
+}
+.modal-backdrop-noBS {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity ease-in .4s;
+    pointer-events: none;
+}
+
+.show-login {
+    .modal-backdrop-noBS {
+        opacity: .5;
+        pointer-events: all;
+        z-index: 4;
+    }
+    .modal-noBS {
+        pointer-events: all;
+        top: 90px;
+    }
 }

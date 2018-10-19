@@ -289,14 +289,11 @@ $(document).ready(function () {
 
 
     //login modal
-    // $('#myModal').on('shown.bs.modal', function () {
-    //     $('#myInput').trigger('focus')
-    //   })
-    // $('.nav-item.login').on('click',function(){
-    //     console.log('click');
-    // });
     $('#login-modal-open').click(function(){
-		$('#exampleModal').modal('show');
+        $('body').toggleClass('show-login')
+	});
+    $('.modal-backdrop-noBS').click(function(){
+        $('body').toggleClass('show-login')
 	});
 
 });

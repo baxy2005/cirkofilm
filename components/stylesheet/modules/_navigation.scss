@@ -57,3 +57,31 @@
   font-weight: bold;
   }
 }
+
+//login a menuben
+.navbar .nav-item.login {
+  a {
+    font-size: 1.5em;
+    color: darken(#fff, 15%);
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1.5em;
+    i+i {
+      font-size: 0.666666666667em;
+      padding-left: 4px;
+      position: relative;
+      bottom: 2px;
+      display: none;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+.logged-in {
+  .navbar .nav-item.login {
+    i+i {
+      display: inline;
+    }
+  }
+}

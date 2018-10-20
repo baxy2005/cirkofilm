@@ -45,12 +45,7 @@
   text-transform: uppercase;
 }
 
-.navbar--tertiary {
-  padding: 0;
-  .nav-link.disabled {
-    color: $dark !important;
-  }
-}
+
 .nav--secondary, .navbar--tertiary {
   .nav-link {
   color: $gray-550;
@@ -62,6 +57,12 @@
 .navbar--film-list {
   padding-right: 0;
   padding-left: 0;
+  .dropdown-menu {
+    border: none;
+  }
+  .navbar-brand {
+    margin: 0;
+  }
   .navbar-toggler {
     width: 100%;
     display: flex;
@@ -69,6 +70,10 @@
     @include media-breakpoint-up (lg) {
       display: none;
     };
+    i {
+      font-size: 2rem;
+      color: $gray-400;
+    }
   }
   .navbar-collapse {
     position: absolute;
@@ -93,11 +98,70 @@
     font-weight: bold;
     font-family: $font-secondary-condens;
     .nav-link {
-      color: $gray-550 ;
+      color: $gray-550;
+      // @include flexContainer (row, center, space-between);
     }
     .nav-link.active {
       color: $gray-900;
     }
   }
-
+  .dropdown-toggle::after {
+    display: none;
+  }
+}
+.navbar--tertiary {
+  padding: 0;
+  margin-bottom: .5rem;
+  margin-top: .5rem;
+  @include media-breakpoint-up (lg) {
+    margin-bottom: 0;
+    margin-top: 0;
+  };
+  .nav-link.disabled {
+    color: $dark !important;
+  }
+    .navbar-toggler {
+      width: auto;
+      margin-right: 1rem;
+    }
+    .navbar-collapse {
+      top: 41px;
+      @include media-breakpoint-up(lg) {
+        background: transparent;
+        top: unset;
+      };
+    }
+    .nav-item {
+      font-size: 1.2rem;
+      @include media-breakpoint-up(lg) {
+        font-size: 1rem;
+      };
+    }
+    .dropdown-menu {
+      border: 0;
+      margin: 0;
+      border-radius: 0;
+      box-shadow: none;
+      z-index: 75;
+      @include media-breakpoint-up(lg) {
+      box-shadow: 0 1rem 3rem rgba(0,0,0,0.175);
+      };
+    }
+    .dropdown.show {
+      background: white;
+    }
+    .nav-link {
+      padding: 1rem;
+      @include media-breakpoint-up (lg) {
+      padding: 1rem;
+      };
+    }
+    .navbar-nav .nav-link {
+      padding-left:0;
+      padding-right:0;
+      @include media-breakpoint-up (lg) {
+        padding-left: .7rem;
+        padding-right: .7rem;
+      };
+    }
 }

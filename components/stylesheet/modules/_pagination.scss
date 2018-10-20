@@ -1,0 +1,28 @@
+.pagination--slider {
+  margin-bottom: 0;
+  font-family: $font-secondary-condens;
+.page-link, .page-item.disabled .page-link {
+  background-color: transparent;
+  border: none;
+  padding: .2rem;
+  font-weight: bold;
+}
+.page-link {
+  color: $gray-600;
+  padding: .1rem;
+  i {
+    font-size: 2rem;
+    color: $gray-500;
+    opacity: .8
+  }
+}
+.page-item {
+  display: flex;
+  align-items: center;
+}
+.page-item.active .page-link {
+  background-color:  transparent;
+  border: none;
+  color: $gray-900;
+}
+}

@@ -32,6 +32,10 @@
   color: $red;
   font-size: 1.375rem;
   padding: 0.3rem 1.5rem;
+  width: 100%;
+  @include media-breakpoint-up (md) {
+    width: auto;
+  };
 }
 .btn-info {
     background-color: transparent;

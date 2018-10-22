@@ -86,8 +86,11 @@ label {
 -------------------------------------------*/
 
 .container--seach {
-  min-height: 16.5rem;
+  min-height: 12rem;
   @include flexContainer (column, stretch, center);
+  @include media-breakpoint-up (sm) {
+    min-height: 16.5rem;
+  } ;
   .form-control:focus {
     box-shadow: none;
     border: none;

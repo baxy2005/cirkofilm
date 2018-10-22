@@ -31,7 +31,10 @@ body{
 	}
 }
 .main-subpage {
-	margin-top: 5.5rem;
+	margin-top: 4.1rem;
+	@include media-breakpoint-up(lg) {
+		margin-top: 5.5rem;
+	};
 }
 
 h1, h2, h3, .display-3, h5, h6 {

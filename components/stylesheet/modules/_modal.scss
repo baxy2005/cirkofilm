@@ -1,17 +1,79 @@
-.modal-noBS {
+.user-modal {
     max-width: 400px;
     padding: 40px;
     // height: ;
     background-color: #fff;
-    border: 2px solid #ECECEC;
+    // border: 2px solid #ECECEC;
     position: fixed;
     top: -400px;
-    right: calc(50% - 570px);
-    z-index: 5;
-    transition: top ease-in .4s;
+    right: calc(50% - 580px);
+    z-index: 1030;
+    transition: top ease-in .3s;
     pointer-events: none;
+    //felso haromszog
+    &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        top: -56px;
+        right: 40px;
+        border-top: 28px solid transparent;
+        border-bottom: 28px solid #fff;
+        border-left: 28px solid transparent;
+        border-right: 28px solid transparent;
+        pointer-events: none;
+    }
+    //close button
+    #user-modal-close {
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        cursor: pointer;
+        color: $gray-500;
+        font-size: 1.5em;
+        &:hover {
+            color: darken($gray-500, $amount: 10%);
+        }
+    }
+    //submit gomb
+    .btn-primary {
+        width: 100%;
+        border: 0;
+        font-size: 22px;
+        background-color: $c-red;
+        color: #fff;
+        letter-spacing: .5px;
+        &:hover {
+            background-color: lighten($c-red, 7%);
+
+        }
+    }
+    //beviteli mezok
+    .form-group {
+    }
+    .form-group + button {
+        margin-top: .5rem;
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+        height: 48px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-color: $gray-100;
+    }
+    input[type="email"], input[type="password"] {
+        padding: .375rem 2.75rem .375rem .75rem;
+    }
+    input[type="email"] {
+        background-image: url(/images/email-icon.svg);
+    }
+    input[type="password"] {
+        background-image: url(/images/password-icon.svg);
+    }
 }
-.modal-backdrop-noBS {
+.user-modal-backdrop {
     position: fixed;
     left: 0;
     right: 0;
@@ -23,13 +85,15 @@
     pointer-events: none;
 }
 
-.show-login {
-    .modal-backdrop-noBS {
-        opacity: .5;
+//show modal
+.show-user-modal {
+    .user-modal-backdrop {
+        opacity: .8;
         pointer-events: all;
         z-index: 4;
+        cursor: pointer;
     }
-    .modal-noBS {
+    .user-modal {
         pointer-events: all;
         top: 90px;
     }

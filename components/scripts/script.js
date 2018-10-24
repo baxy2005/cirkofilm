@@ -289,11 +289,10 @@ $(document).ready(function () {
 
 
     //login modal
-    $('#login-modal-open').click(function(){
-        $('body').toggleClass('show-login')
+    $('#user-modal-open, .show-user-modal .user-modal-backdrop,  .show-user-modal #user-modal-close')
+    .click(function(){
+        $('body').toggleClass('show-user-modal')
 	});
-    $('.modal-backdrop-noBS').click(function(){
-        $('body').toggleClass('show-login')
-	});
+
 
 });

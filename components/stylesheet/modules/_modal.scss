@@ -1,31 +1,87 @@
+//DEV
+.user-modal .login { display: none !important; }
+// .user-modal .register { display: none !important; }
+
+//user-modal
 .user-modal {
-    max-width: 400px;
-    padding: 40px;
-    // height: ;
     background-color: #fff;
-    // border: 2px solid #ECECEC;
     position: fixed;
-    top: -400px;
+    top: 90px;
     right: calc(50% - 580px);
     z-index: 1030;
-    transition: top ease-in .3s;
+    transition: opacity ease-out .2s;
     pointer-events: none;
-    //felso haromszog
-    &::before {
-        content: ' ';
-        display: block;
-        position: absolute;
-        width: 0px;
-        height: 0px;
-        top: -56px;
-        right: 40px;
-        border-top: 28px solid transparent;
-        border-bottom: 28px solid #fff;
-        border-left: 28px solid transparent;
-        border-right: 28px solid transparent;
-        pointer-events: none;
+    opacity: 0;
+
+    //login
+    .login {
+        padding: 40px;
+        width: 400px;
     }
-    //close button
+
+    //register
+    .register {
+        // padding: 40px;
+        display: flex;
+        width: 800px;
+        .col1, .col2 {
+            width: 50%;
+            padding: 40px;
+            min-height: 120px;
+        }
+        .col1 {
+            background-color: $gray-200;
+            text-align: center;
+        }
+        .col2 {
+        }
+    }
+
+    //checkbox
+    .form-check {
+        position: relative;
+        padding-left: 0;
+        margin-top: 32px;
+        cursor: pointer;
+        input {
+            width: 2px;
+            position: absolute;
+            left: 25px;
+            top: 2px;
+
+        }
+        
+        label {
+            font-size: 16px;
+            text-transform: initial;
+            cursor: pointer;
+            padding-left: 32px;
+            position: relative;
+            &::before {
+                content: ' ';
+                display: block;
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: $gray-100;
+                border: 1px solid $gray-400;
+            }
+        }
+        input:checked + label {
+            &::before {
+                background-color: $gray-500;//DEV
+            }
+        }
+    }
+
+    //cim
+    h2 {
+        margin-bottom: 16px;
+    }
+
+    //bezaro gomb
     #user-modal-close {
         position: absolute;
         right: 40px;
@@ -33,10 +89,13 @@
         cursor: pointer;
         color: $gray-500;
         font-size: 1.5em;
+
         &:hover {
-            color: darken($gray-500, $amount: 10%);
+            color: darken($gray-500, 30%);
+            color: $black;
         }
     }
+
     //submit gomb
     .btn-primary {
         width: 100%;
@@ -45,17 +104,17 @@
         background-color: $c-red;
         color: #fff;
         letter-spacing: .5px;
+        margin-bottom: 16px;
         &:hover {
             background-color: lighten($c-red, 7%);
-
         }
     }
-    //beviteli mezok
-    .form-group {
-    }
+
     .form-group + button {
-        margin-top: .5rem;
+        margin-top: 1.7rem;
     }
+
+    //beviteli mezok
     input[type="text"], input[type="email"], input[type="password"] {
         height: 48px;
         position: relative;
@@ -63,16 +122,28 @@
         background-position: top right;
         background-color: $gray-100;
     }
+
     input[type="email"], input[type="password"] {
         padding: .375rem 2.75rem .375rem .75rem;
     }
+
     input[type="email"] {
         background-image: url(/images/email-icon.svg);
     }
+
     input[type="password"] {
         background-image: url(/images/password-icon.svg);
     }
-}
+
+    // login apro betus
+    .login small {
+        font-family: "Roboto Condensed",sans-serif;
+        font-size: 16px;
+    }
+
+}//user-modal
+
+//lesotetites
 .user-modal-backdrop {
     position: fixed;
     left: 0;
@@ -80,21 +151,41 @@
     bottom: 0;
     top: 0;
     background-color: #000;
+    background-color: $gray-600;
     opacity: 0;
-    transition: opacity ease-in .4s;
+    transition: opacity ease-out .2s;
     pointer-events: none;
 }
 
-//show modal
+//megjelenites
 .show-user-modal {
+        
+    .user-modal {
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, .3);
+        pointer-events: all;
+        opacity: 1;
+
+        //felso haromszog
+        &::before {
+            content: ' ';
+            display: block;
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            top: -36px;
+            right: 16px;
+            border-top: 18px solid transparent;
+            border-bottom: 18px solid #fff;
+            border-left: 18px solid transparent;
+            border-right: 18px solid transparent;
+            pointer-events: none;
+        }
+    }
+
     .user-modal-backdrop {
-        opacity: .8;
+        opacity: .9;
         pointer-events: all;
         z-index: 4;
         cursor: pointer;
-    }
-    .user-modal {
-        pointer-events: all;
-        top: 90px;
     }
 }

@@ -1,0 +1,32 @@
+.modal-dialog {
+  max-width: 920px;
+
+}
+
+.modal-content {
+  border-radius: 0;
+  .close {
+    text-shadow: none;
+    font-size: 2.5rem
+  }
+  .modal-header {
+    border-bottom: 0px;
+  }
+}
+
+.modal-dialog--film-trailer {
+  .modal-content {
+    background-color: black;
+  }
+  .modal-header {
+    color: white;
+  }
+  .close {
+    color: white;
+    text-shadow: none;
+    font-size: 2.5rem
+  }
+  .modal-body iframe {
+    width: 100%;
+  }
+}

@@ -245,6 +245,9 @@
     }
   }
 }
+/*-------------------------------------------
+ dates card
+-------------------------------------------*/
 .card--dates {
   .col-auto {
         flex: 0 1 auto;
@@ -262,6 +265,11 @@
     margin-bottom: .7rem;
     background-color: white;
     border:none;
+    h2 {
+      @include media-breakpoint-up (lg) {
+        margin-bottom: 0;
+      };
+    }
   }
   .card-body.d-flex {
     overflow: auto;
@@ -308,6 +316,10 @@
     font-weight: bold;
   }
 }
+
+/*-------------------------------------------
+ news card
+-------------------------------------------*/
 .card--news {
   background: transparent;
   margin-bottom: 1rem;
@@ -371,6 +383,11 @@
     .row {
       border-top: 3px solid rgba(255,255,255, 0.4)
     }
+    span i  {
+      font-size: 2rem;
+      margin-right: .8rem;
+    }
+
   }
   h1 {
     border-bottom: 0px;
@@ -491,4 +508,18 @@
    min-height: 0;
     height: 0;
     overflow: hidden;
+}
+/*-------------------------------------------
+ film card
+-------------------------------------------*/
+.card--film {
+  .card-body {
+    padding: 1rem 0;
+    @include media-breakpoint-up (lg) {
+      padding: 2.59rem 2.1rem;
+    };
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

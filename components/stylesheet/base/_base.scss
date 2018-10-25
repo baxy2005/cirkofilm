@@ -8,6 +8,7 @@ body{
 }
 .section--bm{
 	padding-bottom: 2rem;
+	position: relative;
 	@include media-breakpoint-up (md) {
 		padding-bottom: 4.5rem;
 	};
@@ -78,8 +79,10 @@ h3 {
 	@include noGutter (-4px, 4px);
 	.col-auto:first-child {
 		flex: 1 0 100%;
+		margin-bottom: 1rem;
 		@include media-breakpoint-up (md) {
 			flex: 1 0 65%;
+			margin-bottom: 0;
 		};
 	}
 	.col-auto:last-child {

@@ -2,7 +2,6 @@
   font-family: $font-primary;
   text-transform: uppercase;
   font-weight: 900;
-
 }
 .btn-primary {
   font-size: 1rem;
@@ -11,8 +10,45 @@
   border-color: $light;
   i {
     font-size: 1.6rem;
-    color: $red
+    color: $red;
   }
+  @include hover-focus-active {
+    i{
+      color: white;
+    }
+}
+
+  // span {
+  //   margin-top: .1rem;
+  // }
+}
+.btn-red, .btn-primary {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+}
+.btn-red {
+  background-color: $red;
+  color: white;
+  font-size: 1rem;
+  i {
+    font-size: 1.6rem;
+    margin-right: .5rem;
+  }
+  span {
+    margin-top: .1rem;
+  }
+}
+.btn-red-vod {
+  position: relative;
+  margin-top: .5rem;
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    top: -14px;
+    right: 0;
+    margin-top: 0;
+  };
 }
 .btn-sign {
   border: none;
@@ -59,6 +95,9 @@
       box-shadow: none;
     };
 }
+.btn:focus {
+  box-shadow: none !important;
+}
 .btn-muted {
   display: flex;
   width: 100%;
@@ -70,4 +109,7 @@
     border-color: rgba(255, 255, 255, 1);
     color: white;
   };
+}
+.btn-muted + .row  {
+  border-top: none !important;
 }

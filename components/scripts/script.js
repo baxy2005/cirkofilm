@@ -199,8 +199,8 @@ var ourScene = new ScrollMagic.Scene({
 
   // $('.nav-tabs').responsiveTabs();
 
-  $('.nav-link').on('click', function() {
-     $('.nav-link').removeClass('active');
+  $('.card-header-tabs .nav-link').on('click', function() {
+     $('.card-header-tabs .nav-link').removeClass('active');
   	if ($(this).hasClass('active')) {
   		  $(this).css('border', '3px solid red').removeClass('active');
 

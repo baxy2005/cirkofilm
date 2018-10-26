@@ -12,8 +12,8 @@ gulp.task('sass', function () {
   gulp.src('components/stylesheet/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(gulp.dest('./css'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('./css'));
+    // .pipe(browserSync.stream());
 });
 
 // Uglify Javascripts
@@ -25,10 +25,10 @@ gulp.task('compress', function() {
 
 // Watching files
 gulp.task('watch', function() {
-	browserSync.init({
-    server: './',
-    browser: "google chrome"
-  });
+	// browserSync.init({
+  //   server: './',
+  //   browser: "google chrome"
+  // });
 
   gulp.watch("components/scripts/*.js", ['compress']);
   gulp.watch("components/stylesheet/**/*.scss", ['sass']);

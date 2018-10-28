@@ -5,6 +5,7 @@
 //user-modal
 .user-modal {
     background-color: #fff;
+    // background-color: red;
     position: fixed;
     top: 90px;
     right: calc(50% - 580px);
@@ -159,6 +160,9 @@
 
 //megjelenites
 .show-user-modal {
+
+    overflow: hidden;
+    max-height: 100vh;
         
     .user-modal {
         box-shadow: 0px 2px 15px rgba(0, 0, 0, .3);

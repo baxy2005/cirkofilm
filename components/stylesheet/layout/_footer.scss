@@ -70,10 +70,36 @@ footer {
     };
     p {
       margin-bottom: 0.4rem;
-      margin-left: 0.6rem;
+      margin-left: 0rem;
+      @include media-breakpoint-up(md) {
+        margin-left: 0.6rem;
+      };
     }
     p:last-child {
       margin-bottom: 0rem;
     }
+  }
+  .btn-primary {
+
+    @include media-breakpoint-up (md) {
+      margin: 0 .25rem;
+    };
+    @include media-breakpoint-up (lg) {
+      margin: 0
+    };
+  }
+  .btn-primary:first-child {
+    margin-bottom: .5rem;
+    @include media-breakpoint-up (md) {
+      margin-bottom: 0;
+    };
+    @include media-breakpoint-up (lg) {
+      margin: 0
+    };
+  }
+  .btn-primary:last-child {
+    @include media-breakpoint-up (lg) {
+      margin-left: .5rem;
+    };
   }
 }

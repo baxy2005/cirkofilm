@@ -14,11 +14,18 @@
 
 
 .badge-secondary {
-  font-size: 1.5rem;padding: 0;
-  width: 34px;
-  height: 34px;
   line-height: 1.43;
   margin-right: .5rem;
+  padding: 0;
+  font-size: 1rem;
+  width: 20px;
+  height: 20px;
+  @include media-breakpoint-up (md) {
+    font-size: 1.5rem;
+    width: 34px;
+    height: 34px;
+
+  };
   // color: $gray-600;
   // background-color: $gray-400;
   // font-family: $font-primary;

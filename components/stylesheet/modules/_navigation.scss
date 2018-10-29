@@ -181,3 +181,12 @@
       };
     }
 }
+
+footer {
+    .navbar-brand {
+    margin-bottom: 1rem;
+    @include media-breakpoint-up (lg) {
+      margin-bottom: 0;
+    };
+    }
+}

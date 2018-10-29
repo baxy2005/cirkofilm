@@ -44,9 +44,8 @@
                   <a class="nav-link" href="#">KAPCSOLAT</a>
                 </li>
                 <li class="nav-item login">
-                  <a class="nav-link" href="#" id="login-modal-open"><i class="far fa-user-circle"></i><i
-                      class="fas fa-angle-down"></i></a>
-                      <!-- data-toggle="modal" data-target="#exampleModal" -->
+                  <a class="nav-link" href="#" id="user-modal-open"><i class="far fa-user-circle"></i><i class="fas fa-angle-down"></i></a>
+                  <!-- data-toggle="modal" data-target="#exampleModal" -->
                 </li>
               </ul>
             </div>
@@ -55,10 +54,10 @@
       </div>
     </div>
 
-    
+
   </header>
-  
-  
+
+
 
   <main class="main-subpage">
     <div class="container container--seach">
@@ -636,32 +635,93 @@
       </div>
     </section>
   </footer>
+
+  <div class="user-modal" tabindex="-1" id="loginModal" role="dialog">
+
+    <div id="user-modal-close"><i class="fas fa-times"></i></div>
+    <!-- close button -->
+
+    <div class="login">
+      <h2>Belépés</h2>
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">E-mail cím</label>
+          <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Jelszó</label>
+          <input type="password" class="form-control" placeholder="">
+        </div>
+        <button type="submit" class="btn btn-primary">Belépés</button>
+        <small class="form-text text-muted">Elfelejtetted a jelszavad? <a href="#">Itt kérj újat</a></small>
+        <small class="form-text text-muted">Nincs hozzáférésed? <a href="#">Regisztrálj</a></small>
+      </form>
+    </div>
+    <!-- login -->
+
+    <div class="register">
+
+      <div class="col1">
+        <h2>Letölthető sajtóanyagok</h2>
+        <small class="form-text text-muted">Gyors regisztáció után szinopszisok,
+          plakátok, nagyfelbontású képekhez adunk hozzáférést</small>
+
+      </div>
+      <!-- col1 -->
+
+      <div class="col2">
+        <h2>Regisztráció</h2>
+        <form>
+          <div class="form-group">
+            <label>Név</label>
+            <input type="text" class="form-control" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">E-mail cím</label>
+            <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Jelszó</label>
+            <input type="password" class="form-control" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Jelszó megerősítése</label>
+            <input type="password" class="form-control" placeholder="">
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">
+              Elfogadom a <a href="#">GDPR-adatkezelési szabályzatot </a> </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Elküldés</button>
+        </form>
+      </div>
+      <!-- col2 -->
+
+    </div>
+    <!-- register -->
+
+    <!-- settings -->
+    <div class="settings">
+      <ul>
+        <li><a href="#">Az én profiloldalam</a></li>
+        <li><a href="#">Kijelentkezés</a></li>
+      </ul>
+    </div>
+    <!-- settings -->
+
+  </div>
+  <!-- User--Modal -->
+
+
+  <div class="user-modal-backdrop"></div>
+
   <!-- plugins js bootstrap owl-carousel etc.. -->
   <script src="js/plugin-min.js"></script>
   <!-- my js script -->
   <script src="js/script.js"></script>
 
-  
-    <div class="modal" tabindex="-1" id="exampleModal" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    <!-- Login Modal -->
+
 
 </body>
 

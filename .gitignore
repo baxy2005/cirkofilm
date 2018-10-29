@@ -39,7 +39,7 @@ ehthumbs.db
 Thumbs.db
 *.sass-cache*
 
-css/
+css*
 package-lock.json
 package.json
 package.json

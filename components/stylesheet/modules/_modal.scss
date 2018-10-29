@@ -1,3 +1,10 @@
+// @include media-breakpoint-up(sm) {
+//     // Styles
+// }
+// @include media-breakpoint-up(sm) {
+//     // Styles
+// }
+
 //DEV
 .user-modal .login { display: none !important; }
 // .user-modal .register { display: none !important; }
@@ -5,7 +12,6 @@
 //user-modal
 .user-modal {
     background-color: #fff;
-    // background-color: red;
     position: fixed;
     top: 90px;
     right: calc(50% - 580px);
@@ -31,10 +37,72 @@
             min-height: 120px;
         }
         .col1 {
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
             background-color: $gray-200;
             text-align: center;
+            &::before {
+                content: ' ';
+                display: inline-block;
+                width: 248px;
+                height: 216px;
+                background-image: url(/images/press-cloud.svg);
+                margin: 0 auto;
+            }
         }
         .col2 {
+        }
+    }
+
+    //settings
+    .settings {
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            &:hover li:first-child a::after {
+                content: none;
+            }
+            li {
+                font-family: "Roboto Condensed",sans-serif;
+                font-size: 16px;
+                text-transform: uppercase;
+                line-height: 1;
+                position: relative;
+                a {
+                    width: 100%;
+                    color: $black;
+                    padding: 16px;
+                    box-sizing: border-box;
+                    display: inline-block;
+                    &::before {
+                        font-family: 'Font Awesome 5 Pro';
+                        content: '\f303';
+                        font-weight: 900;
+                        color: $gray-500;
+                        margin-right: 12px;
+                    }
+                    &:hover {
+                        text-decoration: none;
+                        background-color: $gray-200;
+                        
+                    }
+                }
+                &:first-child a::after {
+                    content: ' ';
+                    display: block;
+                    position: absolute;
+                    left: 16px;
+                    right: 16px;
+                    height: 1px;
+                    background-color: $gray-200;
+                    bottom: 0;
+                }
+                &:last-child a::before {
+                    content: '\f2f5';
+                }
+            }
         }
     }
 
@@ -42,16 +110,14 @@
     .form-check {
         position: relative;
         padding-left: 0;
-        margin-top: 32px;
+        margin-top: 32px;   
         cursor: pointer;
         input {
             width: 2px;
             position: absolute;
             left: 25px;
             top: 2px;
-
         }
-        
         label {
             font-size: 16px;
             text-transform: initial;
@@ -72,7 +138,8 @@
         }
         input:checked + label {
             &::before {
-                background-color: $gray-500;//DEV
+                // background-color: $gray-500;//DEV
+                background-image: url(/images/check.svg);
             }
         }
     }
@@ -110,7 +177,6 @@
             background-color: lighten($c-red, 7%);
         }
     }
-
     .form-group + button {
         margin-top: 1.7rem;
     }
@@ -144,6 +210,21 @@
 
 }//user-modal
 
+// hide register/login
+.logged-in .user-modal , .logged-in .user-modal  {
+    .register, .login, #user-modal-close {
+        display: none;
+    }
+}
+
+//hide/show settings
+.user-modal .settings {
+    display: none;
+}
+.logged-in .user-modal .settings {
+    display: block;
+}
+
 //lesotetites
 .user-modal-backdrop {
     position: fixed;
@@ -152,18 +233,14 @@
     bottom: 0;
     top: 0;
     background-color: #000;
-    background-color: $gray-600;
+    background-color: $gray-600;//TODO szint meghatarozni
     opacity: 0;
     transition: opacity ease-out .2s;
     pointer-events: none;
 }
 
-//megjelenites
+//toggle user-modal
 .show-user-modal {
-
-    overflow: hidden;
-    max-height: 100vh;
-        
     .user-modal {
         box-shadow: 0px 2px 15px rgba(0, 0, 0, .3);
         pointer-events: all;
@@ -185,7 +262,6 @@
             pointer-events: none;
         }
     }
-
     .user-modal-backdrop {
         opacity: .9;
         pointer-events: all;

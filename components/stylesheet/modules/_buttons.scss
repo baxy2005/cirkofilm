@@ -116,3 +116,19 @@
 .btn-xl {
   padding: 1rem 5rem;
 }
+.btn-small-icon {
+  border: none;
+  padding: 0;
+  i {
+    font-size: 1.2rem;
+    margin-right: .5rem;
+    line-height: 1.3;
+  }
+  @include hover-focus-active {
+    background-color: transparent;
+    color: $red;
+    i {
+      color: $red;
+    }
+  };
+}

@@ -1,16 +1,28 @@
 .modal-dialog {
-  max-width: 920px;
-
+  max-width: auto;
+  @include media-breakpoint-up (sm) {
+    max-width: 85%;
+  };
+  @include media-breakpoint-up (lg) {
+    max-width: 920px;
+  };
 }
 
 .modal-content {
   border-radius: 0;
+  border: none;
   .close {
     text-shadow: none;
     font-size: 2.5rem
   }
   .modal-header {
     border-bottom: 0px;
+  }
+  .modal-header, .modal-body {
+    padding: 1rem  1rem 0 1rem;
+    @include media-breakpoint-up (md) {
+      padding: 2.5rem 2.5rem 0 2.5rem;
+    };
   }
 }
 

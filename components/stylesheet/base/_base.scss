@@ -119,3 +119,18 @@ h3 {
 		};
 	}
 }
+ol, ul, dl {
+	margin-bottom: 2rem;
+}
+.table  {
+	font-family: $font-secondary-condens;
+	thead th {
+		border-top: 0;
+		border-bottom: 3px solid $gray-200;
+		text-transform: uppercase;
+		font-weight: bold
+	}
+}
+th {
+	font-weight: normal;
+}

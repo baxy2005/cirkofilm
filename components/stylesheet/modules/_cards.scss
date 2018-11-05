@@ -126,7 +126,7 @@
     };
     p {
       margin-bottom: .5rem;
-      margin-top: -.2rem;
+      margin-top: -.2rem ;
     }
   }
   .d-flex {
@@ -551,5 +551,21 @@
     p:last-child {
       margin-bottom: 0;
     }
+  }
+}
+/*-------------------------------------------
+ sponsors card
+-------------------------------------------*/
+
+.card--logos {
+  text-align: center;
+  .img-fluid {
+    width: 90px;
+  }
+  .card-body {
+    padding: 1rem;
+    @include media-breakpoint-up (md) {
+    padding: 1.25rem;
+    };
   }
 }

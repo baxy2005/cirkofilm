@@ -1,7 +1,8 @@
 .navbar {
   width: 100%;
+  display: flex;
   @include media-breakpoint-up (sm) {
-  padding:   .5rem 0rem;
+  padding: .5rem 0rem;
   };
   .navbar-brand {
     opacity: .7;
@@ -59,7 +60,7 @@
 }
 
 //login a menuben
-.navbar .nav-item.login {
+.navbar .nav-login {
   a {
     font-size: 1.5em;
     color: darken(#fff, 15%);
@@ -79,9 +80,27 @@
   }
 }
 .logged-in {
-  .navbar .nav-item.login {
+  .navbar .nav-login {
     i+i {
       display: inline;
     }
   }
 }
+
+// navbar order mobile
+@include media-breakpoint-down(md) {
+  .navbar {
+    // background-color: red;
+    .navbar-toggler {
+      order: 2;
+    }
+    .nav-login {
+      order: 1;
+      margin-right: 16px;
+      
+    }
+  }
+}
+
+
+

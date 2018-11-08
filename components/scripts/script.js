@@ -290,13 +290,46 @@ $(document).ready(function () {
 
     //login modal
     $('#user-modal-open, .show-user-modal .user-modal-backdrop,  .show-user-modal #user-modal-close')
-    .click(function(){
-        $('body').toggleClass('show-user-modal');
-        $('.navbar-collapse').removeClass('open');
-        // TODO
-        // https://stackoverflow.com/questions/23494468/detect-different-kind-of-scrollbars-eg-normal-hidden-osx
-        // https://davidwalsh.name/detect-scrollbar-width
-	});
+        .click(function () {
+            $('body').toggleClass('show-user-modal');
+            $('.navbar-collapse').removeClass('open');
+            // TODO
+            // https://stackoverflow.com/questions/23494468/detect-different-kind-of-scrollbars-eg-normal-hidden-osx
+            // https://davidwalsh.name/detect-scrollbar-width
+        });
+
+    $('#searchbutton').click(function () {
+        $('.container--seach input.form-control').focus();
+        $('.container--seach').addClass('focus');
+    });
+
+    //login modal
+    $('#user-modal-open, .show-user-modal .user-modal-backdrop,  .show-user-modal #user-modal-close')
+        .click(function () {
+            $('body').toggleClass('show-user-modal');
+            $('.navbar-collapse').removeClass('open');
+            // TODO
+            // https://stackoverflow.com/questions/23494468/detect-different-kind-of-scrollbars-eg-normal-hidden-osx
+            // https://davidwalsh.name/detect-scrollbar-width
+        });
+
+
+    $('#test').focus(function () {
+        console.log('sdf');
+    });
+    
+    $('#searchinput').focus(function () {
+        // console.log('asd');
+        $('body').addClass('searchfocus');
+    });
+    $('#searchinput').blur(function () {
+        // console.log('asd');
+        $('body').removeClass('searchfocus');
+    });
+
+   
+    
+
 
 
 });

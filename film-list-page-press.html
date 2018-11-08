@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="show-user-modal logged-in">
+<body class="Xshow-user-modal Xlogged-in">
+  
   <header>
     <div class="container-fluid fixed-top bg-dark">
       <div class="container">
@@ -43,11 +44,13 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#">KAPCSOLAT</a>
                 </li>
-                <li class="nav-item login">
+                <!-- <li class="nav-item login">
                   <a class="nav-link" href="#" id="user-modal-open"><i class="far fa-user-circle"></i><i class="fas fa-angle-down"></i></a>
-                  <!-- data-toggle="modal" data-target="#exampleModal" -->
-                </li>
+                </li> -->
               </ul>
+            </div>
+            <div class="nav-search">
+              <a href="#" id="searchbutton"><i class="fas fa-search"></i></a>
             </div>
             <div class="nav-login">
               <a href="#" id="user-modal-open"><i class="far fa-user-circle"></i><i class="fas fa-angle-down"></i></a>
@@ -60,15 +63,17 @@
 
   </header>
 
-
-
+  
+  
+  
   <main class="main-subpage">
+      <input type="text" id="test">
     <div class="container container--seach">
       <form class="form-inline--border-bottom">
         <div class="row form-inline">
           <div class="col-md-11 d-flex align-items-center">
             <i class="fa fa-search" aria-hidden="true"></i>
-            <input class="form-control form-control-lg form-control--no-border" type="text" placeholder="Film, rendező, műfaj  "
+            <input id="searchinput" class="form-control form-control-lg form-control--no-border" type="text" placeholder="Film, rendező, műfaj  "
               aria-label="Search">
           </div>
           <div class="col-md-1 col-md-1 d-flex justify-content-end">

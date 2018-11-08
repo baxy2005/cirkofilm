@@ -67,6 +67,7 @@
     padding-top: 0;
     padding-bottom: 0;
     font-size: 1.5em;
+    margin-left: 15px;
     i+i {
       font-size: 0.666666666667em;
       padding-left: 4px;
@@ -101,6 +102,16 @@
     }
   }
 }
+
+.navbar .nav-search {
+  a {
+    font-size: 1.5em;
+    color: darken(#fff, 15%);
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1.5em;
+  }
+} 
 
 
 

@@ -61,7 +61,10 @@ label {
 -------------------------------------------*/
 
 .container--seach {
-  min-height: 16.5rem;
+  // min-height: 16.5rem;
+  box-sizing: content-box;
+  padding-top: 27px;
+  padding-bottom: 36px;
   @include flexContainer (column, stretch, center);
   i {
     font-size: 2rem;
@@ -71,4 +74,37 @@ label {
     box-shadow: none;
     border: none;
   }
+  transition: padding ease .4s;
+}
+
+.container--seach + .container-fluid {
+  position: relative;
+  &::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity ease .6s;
+    pointer-events: none;
+  }
+}
+
+.searchfocus {
+  .container--seach {
+    // min-height: 18.5rem;
+    padding-top: 36px;
+    padding-bottom: 48px;
+  }
+  .container--seach + .container-fluid {
+    position: relative;
+    &::after {
+      opacity: .15 ;
+    }
+  }
+
 }

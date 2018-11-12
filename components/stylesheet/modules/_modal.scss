@@ -7,8 +7,8 @@
 // }
 
 //DEV
-.user-modal .login { display: none !important; }
-// .user-modal .register { display: none !important; }
+// .user-modal .login { display: none !important; }
+.user-modal .register { display: none !important; }
 
 //user-modal
 .user-modal {
@@ -264,6 +264,13 @@
             }
         }
 
+    }
+    .show-user-modal .user-modal {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
     }
 }
 

@@ -87,12 +87,12 @@ label {
 
 .container--seach {
   box-sizing: content-box;
-  padding-top: 27px;
-  padding-bottom: 36px;
+  padding-top: 24px;
+  padding-bottom: 33px;
   @include flexContainer (column, stretch, center);
-  @include media-breakpoint-up (sm) {
-    min-height: 16.5rem;
-  } ;
+  // @include media-breakpoint-up (sm) {
+  //   min-height: 16.5rem;
+  // } ;
   .form-control:focus {
     box-shadow: none;
     border: none;
@@ -127,13 +127,16 @@ label {
 .searchfocus {
   .container--seach {
     // min-height: 18.5rem;
-    padding-top: 36px;
-    padding-bottom: 48px;
+    padding-top: 39px;
+    padding-bottom: 53px;
+    .form-inline--border-bottom {
+      border-color: $c-red;
+    }
   }
   .container--seach + .container-fluid {
     position: relative;
     &::after {
-      opacity: .15 ;
+      opacity: .2 ;
     }
   }
 }

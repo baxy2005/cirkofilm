@@ -1,8 +1,9 @@
 .navbar {
   font-weight: bold;
   width: 100%;
+  display: flex;
   @include media-breakpoint-up (sm) {
-  padding:   .5rem 0rem;
+  padding: .5rem 0rem;
   };
   .navbar-brand {
     opacity: .7;
@@ -25,20 +26,6 @@
 }
 .top-nav {
   transition: background .3s  ease;
-  // padding-left: 0;
-  // padding-right: 0;
-  // @include media-breakpoint-up (sm) {
-  //   padding-left: 15px;
-  //   padding-right: 15px;
-  // };
-  // .container {
-  //   padding-left: 0;
-  //   padding-right: 0;
-  //   @include media-breakpoint-up (sm) {
-  //     padding-left: 15px;
-  //     padding-right: 15px;
-  //   };
-  // }
 }
 .top-nav, .top-nav .container {
   padding-left: 0;
@@ -47,7 +34,6 @@
     padding-left: 15px;
     padding-right: 15px;
   };
-
 }
 .nav--secondary {
   .nav-link {
@@ -190,3 +176,64 @@ footer {
     };
     }
 }
+
+//login a menuben
+.navbar .nav-login {
+  a {
+    font-size: 1.5em;
+    color: darken(#fff, 15%);
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1.5em;
+    margin-left: 15px;
+    i+i {
+      font-size: 0.666666666667em;
+      padding-left: 4px;
+      position: relative;
+      bottom: 2px;
+      display: none;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+.logged-in {
+  .navbar .nav-login {
+    i+i {
+      display: inline;
+    }
+  }
+}
+
+// navbar order mobile
+@include media-breakpoint-down(md) {
+  .navbar {
+    // background-color: red;
+    .navbar-toggler {
+      order: 2;
+    }
+    .nav-login {
+      order: 1;
+      margin-right: 16px;
+      
+    }
+  }
+}
+.searchfocus .navbar .nav-search {
+  a {
+    color: #fff;
+  }
+}
+.navbar .nav-search {
+  a {
+    font-size: 1.5em;
+    color: darken(#fff, 15%);
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1.5em;
+  }
+} 
+
+
+

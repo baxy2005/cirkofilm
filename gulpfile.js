@@ -22,7 +22,7 @@ gulp.task('sass', function () {
 // Uglify Javascripts
 gulp.task('compress', function() {
   return gulp.src('components/scripts/*.js')
-    .pipe(uglify())
+//    .pipe(uglify())
     .pipe(gulp.dest('js'));
 });
 

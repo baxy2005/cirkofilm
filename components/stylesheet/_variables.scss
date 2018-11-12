@@ -8,6 +8,8 @@
 // Color system
 //
 
+$c-red: #D0021B;
+
 // stylelint-disable
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
@@ -23,6 +25,7 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
+
 
 $grays: () !default;
 $grays: map-merge((
@@ -929,3 +932,6 @@ $pre-scrollable-max-height:         340px !default;
 // Printing
 $print-page-size:                   a3 !default;
 $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
+
+//v4.1.3 fix
+$custom-select-box-shadow:          0;

@@ -82,7 +82,7 @@
                     <span class="h2">••••••••</span>
                     </p>
                     <a class="btn btn-primary btn-lg justify-content-start" href="#" role="button" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-pencil-alt mr-2"></i>Adatok módosítása</a>
-                    <button type="button" class="btn btn-link p-0 mt-3"><i class="fas fa-trash-alt mr-2"></i>profil törlése</button>
+                    <button type="button" class="btn btn-link p-0 mt-3" data-toggle="modal" data-target="#exampleModal2"><i class="fas fa-trash-alt mr-2"></i>profil törlése</button>
                 </div>
               </div>
             </div>
@@ -246,7 +246,25 @@
       </div>
     </div>
   </div>
-</div>
+</div>  <!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel2">Profil törlése</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body pb-3 pb-md-5">
+        <div class="row justify-content-center align-contents-center">
+          <button class="btn btn-red btn-xl mr-2 ml-2 mb-2 mb-sm-0" type="submit">Igen</button>
+          <button class="btn btn-primary btn-xl mr-2 ml-2 mb-2 mb-sm-0" type="submit">Mégse</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  <!-- Modal -->
 </body>
 
 </html>

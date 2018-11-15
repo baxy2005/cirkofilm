@@ -53,6 +53,7 @@
 .btn-sign {
   border: none;
   display: flex;
+  transition: all .2s ease;
   i {
     font-size: 2.125rem;
   }
@@ -62,7 +63,15 @@
   @include media-breakpoint-up (md) {
     padding-right: 1.85rem;
     padding-left: 0;
-  };
+  }
+  @include hover-focus-active {
+    i {
+      color: $red;
+      background-color:transparent;
+    }
+    background-color: transparent;
+    transform: translate(10px,0);
+  }
 }
 .btn--search {
   color: $red;

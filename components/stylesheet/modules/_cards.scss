@@ -539,6 +539,11 @@
     height: 0;
     overflow: hidden;
 }
+.card {
+  .btn-primary {
+    width: min-content;
+  }
+}
 /*-------------------------------------------
  film card
 -------------------------------------------*/
@@ -550,6 +555,14 @@
     };
     p:last-child {
       margin-bottom: 0;
+    }
+    .fa-user-circle {
+      font-size: 3rem;
+      margin-bottom: .5rem;
+      @include media-breakpoint-up (md) {
+        font-size: 6rem;
+        margin-bottom: 1rem;
+      };
     }
   }
 }

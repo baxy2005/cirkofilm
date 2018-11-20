@@ -53,7 +53,7 @@
 
 //DEV
 // .user-modal .login { display: none !important; }
-.user-modal .register { display: none !important; }
+//.user-modal .register { display: none !important; }
 
 //user-modal
 .user-modal {
@@ -327,12 +327,12 @@
 }
 
 //hide/show settings
-.user-modal .settings {
-    display: none;
-}
-.logged-in .user-modal .settings {
-    display: block;
-}
+//.user-modal .settings {
+//    display: none;
+//}
+//.logged-in .user-modal .settings {
+//    display: block;
+//}
 
 //lesotetites
 .user-modal-backdrop {

@@ -115,6 +115,9 @@
       color: $gray-900;
     }
   }
+  .nav-item.active .nav-link {
+    border-bottom: 0;
+  }
   .dropdown-toggle::after {
     display: none;
   }

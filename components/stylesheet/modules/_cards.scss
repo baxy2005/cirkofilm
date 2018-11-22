@@ -74,6 +74,9 @@
       padding: 1.875rem;
     };
   }
+  .btn-primary:not(:disabled):not(.disabled):active {
+    background-color: transparent;
+  }
 }
 
 .card--lists {
@@ -429,6 +432,10 @@
     color: rgba( 255,255,255, 0.6);
     text-transform: uppercase;
   }
+  .btn-info:not(:disabled):not(.disabled):active {
+    background-color: transparent;
+    border: 3px solid transparent;
+  }
 }
 .card-deck {
   height: 100%;
@@ -583,6 +590,41 @@
     padding: 1rem;
     @include media-breakpoint-up (md) {
     padding: 1.25rem;
+    };
+  }
+}
+/*-------------------------------------------
+services card
+-------------------------------------------*/
+.btn-lg.mt-auto {
+  width: 100%;
+  @include media-breakpoint-up (sm) {
+    width: min-content;
+  };
+}
+.card--services {
+  text-align: center;
+  .card-title {
+  }
+  .card-body {
+    padding: 1rem;
+    padding-bottom: 1rem;
+    @include media-breakpoint-up (md) {
+      padding: 3rem;
+      padding-bottom: 1.5rem;
+    };
+  }
+  .card-footer {
+    padding-top: 0;
+    padding-bottom: 1rem;
+    @include media-breakpoint-up (md) {
+      padding-bottom: 3rem;
+    };
+  }
+  .btn-primary {
+    width: 100%;
+    @include media-breakpoint-up (sm) {
+      width: min-content;
     };
   }
 }

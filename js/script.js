@@ -281,6 +281,17 @@ $(document).ready(function () {
     // });
 // >>>>>>> bezbranch
 
+// var width = $('.card--hero .card-title').width()
+// var heroP = $('.card--hero .card-text').width()
+// console.log (width)
+// console.log (heroP)
+//
+// if (width > heroP ) {
+//     $(heroP).addClass('show');
+//     }
+
+
+
     function prepareLazyCarousel($element_name) {
         return $($element_name).each(function () {
             var imgSrc = $(this).attr('src');

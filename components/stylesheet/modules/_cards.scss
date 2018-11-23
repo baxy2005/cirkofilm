@@ -66,6 +66,9 @@
   }
   .card-title {
     margin-bottom: 0;
+    a {
+      color: $gray-900;
+    }
   }
   .card-body {
     padding: 1rem;
@@ -392,6 +395,8 @@
   z-index: 66;
   left: 1rem;
   right: 1rem;
+  width: min-content;
+  min-width: 100px;
   @include media-breakpoint-up (sm) {
     left: auto;
     right: auto;

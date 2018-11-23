@@ -170,23 +170,28 @@ $(document).ready(function () {
       ScrollMagic
     -------------------------------------------*/
 
-    // init ScrollMagic
-    var controller = new ScrollMagic.Controller();
-    // set timeline
+    // FIXME? there is no top-nav element
 
-    var ourScene = new ScrollMagic.Scene({
-        // triggerElement: '#project01 img',
-        triggerHook: 1,
-        offset: 60
-    })
-        .setClassToggle('.top-nav', 'bg-dark') // add class to project01
-        // .addIndicators({
-        //   // name: 'fade scene',
-        //   // colorTrigger: 'black',
-        //   // colorStart: '#75C695',
-        //   // colorEnd: 'pink'
-        // }) // this requires a plugin
-        .addTo(controller);
+    if ($('.top-nav').length > 0) {
+        // // init ScrollMagic
+        var controller = new ScrollMagic.Controller();
+        // set timeline
+
+        var ourScene = new ScrollMagic.Scene({
+            // triggerElement: '#project01 img',
+            triggerHook: 1,
+            offset: 60
+        })
+            .setClassToggle('.top-nav', 'bg-dark') // add class to project01
+            // .addIndicators({
+            //   // name: 'fade scene',
+            //   // colorTrigger: 'black',
+            //   // colorStart: '#75C695',
+            //   // colorEnd: 'pink'
+            // }) // this requires a plugin
+            .addTo(controller);
+
+    }
 
     /*-------------------------------------------
         carousel bg
@@ -274,6 +279,7 @@ $(document).ready(function () {
     //       stopCarousel();
     //     }
     // });
+// >>>>>>> bezbranch
 
     function prepareLazyCarousel($element_name) {
         return $($element_name).each(function () {
@@ -286,12 +292,12 @@ $(document).ready(function () {
 
     prepareLazyCarousel('.card-img-wrapper .card-img-top');
 
-
-    //login modal
+    // login modal
     $('#user-modal-open, .show-user-modal .user-modal-backdrop, #user-modal-close')
         .click(function () {
             $('body').toggleClass('show-user-modal');
             $('.navbar-collapse').removeClass('open');
+            $('.user-modal-content').load($(this).data("remote"));
             // TODO
             // https://stackoverflow.com/questions/23494468/detect-different-kind-of-scrollbars-eg-normal-hidden-osx
             // https://davidwalsh.name/detect-scrollbar-width
@@ -311,5 +317,4 @@ $(document).ready(function () {
         // console.log('asd');
         $('body').removeClass('searchfocus');
     });
-
 });

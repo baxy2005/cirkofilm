@@ -22,6 +22,9 @@
     "font-awesome": "^4.7.0",
     "animate.css": "^3.5.2",
     "popper.js": "^1.12.5"
+    "popper.js": "^1.12.5",
+    "jquery-form": "^4.2.2"
+
   },
   "devDependencies": {
     "bootstrap": "4.1.0"

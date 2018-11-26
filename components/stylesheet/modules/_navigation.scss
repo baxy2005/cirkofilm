@@ -136,6 +136,7 @@
     .navbar-toggler {
       width: auto;
       margin-right: 1rem;
+      order: 1;
     }
     .navbar-collapse {
       top: 41px;
@@ -143,6 +144,9 @@
         background: transparent;
         top: unset;
       };
+    }
+    nav {
+      order:2;
     }
     .nav-item {
       font-size: 1.2rem;

@@ -86,7 +86,7 @@ label {
 -------------------------------------------*/
 
 .container--seach {
-  box-sizing: content-box;
+  // box-sizing: content-box;
   padding-top: 24px;
   padding-bottom: 33px;
   @include flexContainer (column, stretch, center);
@@ -130,7 +130,7 @@ label {
     padding-top: 39px;
     padding-bottom: 53px;
     .form-inline--border-bottom {
-      border-color: $c-red;
+      border-color: $gray-700;
     }
   }
   .container--seach + .container-fluid {

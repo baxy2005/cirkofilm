@@ -18,6 +18,13 @@
     font-family: $font-secondary-condens;
     text-transform: none;
   }
+  a h6 {
+    color: $gray-900;
+    text-decoration: none;
+  }
+  a:hover  {
+    text-decoration: none;
+  }
   .card-body {
     padding: .5rem 1.25rem 0rem 1.25rem;
     text-align: center;

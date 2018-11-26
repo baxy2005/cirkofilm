@@ -1,6 +1,6 @@
 .owl-nav--custom {
   height: 3rem;
-  h6 {
+  h6, h6 a {
     margin: 0;
     color: $gray-600;
     font-weight: bold;
@@ -9,6 +9,7 @@
     text-transform: uppercase;
 
   }
+
   @include flexContainer(row, center, flex-end);
   .owl-prev {
     order: 2;

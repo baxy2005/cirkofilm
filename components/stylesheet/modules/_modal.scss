@@ -93,7 +93,7 @@
                 display: inline-block;
                 width: 248px;
                 height: 216px;
-                background-image: url(/images/press-cloud.svg);
+                background-image: url(../images/press-cloud.svg);
                 margin: 0 auto;
             }
         }
@@ -185,7 +185,7 @@
         input:checked + label {
             &::before {
                 // background-color: $gray-500;//DEV
-                background-image: url(/images/check.svg);
+                background-image: url(../images/check.svg);
             }
         }
     }
@@ -241,11 +241,11 @@
     }
 
     input[type="email"] {
-        background-image: url(/images/email-icon.svg);
+        background-image: url(../images/email-icon.svg);
     }
 
     input[type="password"] {
-        background-image: url(/images/password-icon.svg);
+        background-image: url(../images/password-icon.svg);
     }
 
     // login apro betus

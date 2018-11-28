@@ -404,11 +404,11 @@
   right: 1rem;
   // width: min-content;
   // min-width: 100px;
-  max-width: inital;
+  // max-width: inital;
   @include media-breakpoint-up (sm) {
     left: auto;
     right: auto;
-    max-width: 50%;
+    // max-width: 50%;
   };
   // @include media-breakpoint-up(md) {
   //   bottom: 17%;

@@ -293,6 +293,12 @@ console.log (heroP)
 //   console.log(hero)
 //     }
 
+// $('.owl-one .item').each(function(i) {
+//   $(this).closest(hero).css({'width':($(width).width()+'px')});
+// });
+$('.owl-one .item .card--hero').each(function(i) {
+  $(this).css({'width':($(width).width()+'px')});
+});
 
     function prepareLazyCarousel($element_name) {
         return $($element_name).each(function () {

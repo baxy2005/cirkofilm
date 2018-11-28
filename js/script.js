@@ -281,15 +281,17 @@ $(document).ready(function () {
     // });
 // >>>>>>> bezbranch
 
-// var width = $('.card--hero .card-title').width()
-// var heroP = $('.card--hero .card-text').width()
-// console.log (width)
-// console.log (heroP)
-//
-// if (width > heroP ) {
-//     $(heroP).addClass('show');
-//     }
+var width = $('.card--hero .card-title')
+var heroP = $('.card--hero .card-text')
+var hero = $('.card--hero')
+console.log (width)
+console.log (heroP)
 
+// if ($(width).innerWidth() < $(heroP).innerWidth() ) {
+//   $(heroP).css('border', '3px solid red');
+//   $(heroP).css({'width':($(width).width()+'px')});
+//   console.log(hero)
+//     }
 
 
     function prepareLazyCarousel($element_name) {

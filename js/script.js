@@ -9,6 +9,8 @@ $(document).ready(function () {
         autoplay: false,
         items: 1,
         dots: true,
+        autoplay: true,
+        animateOut: 'fadeOut',
         responsive: {
             0: {
                 items: 1,
@@ -57,6 +59,7 @@ $(document).ready(function () {
         nav: true,
         nav: true,
         margin: 12,
+        dots: false,
         navContainer: '#owl-4',
         navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>", "<i class='fas fa-angle-right' aria-hidden='true'></i>"],
         responsive: {
@@ -281,11 +284,11 @@ $(document).ready(function () {
     // });
 // >>>>>>> bezbranch
 
-var width = $('.card--hero .card-title')
-var heroP = $('.card--hero .card-text')
-var hero = $('.card--hero')
-console.log (width)
-console.log (heroP)
+// var width = $('.card--hero .card-title')
+// var heroP = $('.card--hero .card-text')
+// var hero = $('.card--hero')
+// console.log (width)
+// console.log (heroP)
 
 // if ($(width).innerWidth() < $(heroP).innerWidth() ) {
 //   $(heroP).css('border', '3px solid red');
@@ -296,8 +299,56 @@ console.log (heroP)
 // $('.owl-one .item').each(function(i) {
 //   $(this).closest(hero).css({'width':($(width).width()+'px')});
 // });
-$('.owl-one .item .card--hero').each(function(i) {
-  $(this).css({'width':($(width).width()+'px')});
+// $('.owl-one .item .card--hero').each(function(i) {
+//   $(this).css({'width':($(width).width()+'px')});
+// });
+
+// var titleO = $('.card--hero .card-title').html()
+// var title = titleO.split(" ");
+// title[1] = title[1]+"<br/>";
+// var newstr = title.join(" ");
+// $(".card--hero .card-title").html(newstr);
+
+// $('.card--hero .card-title').each(function(i) {
+//   var titleO = $(this).html();
+//   var title = titleO.split(" ");
+//   title[1] = title[1]+"<br/>";
+//   var newstr = title.join(" ");
+//   $(this).html(newstr)
+//   console.log(this)
+// });
+
+/*-------------------------------------------
+hero title
+-------------------------------------------*/
+
+$('.card--hero .card-title').each(function(i) {
+var titleO = $(this).html();
+var title = titleO.split(" ");
+title.forEach(function(item, i, title){
+  if(i==1)
+    title[i] += "<br/>";
+  else
+  title[i] += ' ';
+})
+$(this).html(title.join(''))
+});
+
+
+// if ($(width).innerWidth() < $(heroP).innerWidth() ) {
+//   // $(heroP).css('border', '3px solid red');
+//   $(heroP).css({'width':($(width).width()+'px')});
+//   console.log(hero)
+//     }
+
+$('.card--hero .card-title').each(function(i) {
+  var width = $(this)
+  var heroP = $(this).next()
+  if ($(width).innerWidth() < $(heroP).innerWidth() ) {
+    // $(heroP).css('border', '3px solid red');
+    $(heroP).css({'width':($(width).width()+'px')});
+    console.log(width)
+      }
 });
 
     function prepareLazyCarousel($element_name) {

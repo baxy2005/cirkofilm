@@ -219,6 +219,8 @@
         color: #fff;
         letter-spacing: .5px;
         margin-bottom: 16px;
+        display: flex;
+        justify-content: center;
         &:hover {
             background-color: lighten($c-red, 7%);
         }

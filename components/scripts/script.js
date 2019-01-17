@@ -284,39 +284,7 @@ $(document).ready(function () {
     // });
 // >>>>>>> bezbranch
 
-// var width = $('.card--hero .card-title')
-// var heroP = $('.card--hero .card-text')
-// var hero = $('.card--hero')
-// console.log (width)
-// console.log (heroP)
 
-// if ($(width).innerWidth() < $(heroP).innerWidth() ) {
-//   $(heroP).css('border', '3px solid red');
-//   $(heroP).css({'width':($(width).width()+'px')});
-//   console.log(hero)
-//     }
-
-// $('.owl-one .item').each(function(i) {
-//   $(this).closest(hero).css({'width':($(width).width()+'px')});
-// });
-// $('.owl-one .item .card--hero').each(function(i) {
-//   $(this).css({'width':($(width).width()+'px')});
-// });
-
-// var titleO = $('.card--hero .card-title').html()
-// var title = titleO.split(" ");
-// title[1] = title[1]+"<br/>";
-// var newstr = title.join(" ");
-// $(".card--hero .card-title").html(newstr);
-
-// $('.card--hero .card-title').each(function(i) {
-//   var titleO = $(this).html();
-//   var title = titleO.split(" ");
-//   title[1] = title[1]+"<br/>";
-//   var newstr = title.join(" ");
-//   $(this).html(newstr)
-//   console.log(this)
-// });
 
 /*-------------------------------------------
 hero title

@@ -9,7 +9,7 @@ $(document).ready(function () {
         autoplay: false,
         items: 1,
         dots: true,
-        autoplay: true,
+        // autoplay: true,
         animateOut: 'fadeOut',
         responsive: {
             0: {
@@ -290,6 +290,8 @@ $(document).ready(function () {
 hero title
 -------------------------------------------*/
 
+if ( $(window).width() > 576 ) {
+
 $('.card--hero .card-title').each(function(i) {
 var titleO = $(this).html();
 var title = titleO.split(" ");
@@ -303,12 +305,6 @@ $(this).html(title.join(''))
 });
 
 
-// if ($(width).innerWidth() < $(heroP).innerWidth() ) {
-//   // $(heroP).css('border', '3px solid red');
-//   $(heroP).css({'width':($(width).width()+'px')});
-//   console.log(hero)
-//     }
-
 $('.card--hero .card-title').each(function(i) {
   var width = $(this)
   var heroP = $(this).next()
@@ -317,6 +313,32 @@ $('.card--hero .card-title').each(function(i) {
     $(heroP).css({'width':($(width).width()+'px')});
     console.log(width)
       }
+});
+}
+
+$(window).resize(function() {
+    if ( $(window).width() < 576 ) {
+      var tilteH1 = $('.card--hero .card-title');
+        if (tilteH1.has('br')){
+          $('.card--hero .card-title br').replaceWith(' ')
+        }
+      } else if ( $(window).width() > 576 ) {
+      // stopCarousel();
+      if ($('.card--hero .card-title br').length){
+      }else {
+        $('.card--hero .card-title').each(function(i) {
+        var titleO = $(this).html();
+        var title = titleO.split(" ");
+        title.forEach(function(item, i, title){
+          if(i==1)
+            title[i] += "<br/>";
+          else
+          title[i] += ' ';
+        })
+        $(this).html(title.join(''))
+        });
+      }
+    }
 });
 
     function prepareLazyCarousel($element_name) {

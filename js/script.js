@@ -9,7 +9,7 @@ $(document).ready(function () {
         autoplay: false,
         items: 1,
         dots: true,
-        // autoplay: true,
+        autoplay: true,
         animateOut: 'fadeOut',
         responsive: {
             0: {

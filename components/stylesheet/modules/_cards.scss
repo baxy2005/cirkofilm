@@ -644,3 +644,12 @@ services card
     };
   }
 }
+
+.card-title a {
+  color: $gray-900;
+}
+
+.card-title a:hover {
+  color: $gray-700;
+}
+

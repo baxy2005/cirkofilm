@@ -513,7 +513,7 @@
     };
     .card-img-top {
       width: 135px;
-      height: auto;
+      //height: auto;
       margin-bottom: .5rem;
       display: none;
       @include media-breakpoint-up(sm) {

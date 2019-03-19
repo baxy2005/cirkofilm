@@ -20,7 +20,8 @@ $(document).ready(function () {
                 margin: 0
             }
         },
-        loop: true,
+        loop: false,
+        rewind: true,
         nav: false,
         lazyLoad: true,
         navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>", "<i class='fas fa-angle-right' aria-hidden='true'></i>"]
@@ -45,7 +46,8 @@ $(document).ready(function () {
         },
         nav: true,
         navContainer: '#owl-2',
-        loop: true,
+        loop: false,
+        rewind: true,
         lazyLoad: true,
         navText: ["<i class='fas fa-angle-left' aria-hidden='true'></i>", "<i class='fas fa-angle-right' aria-hidden='true'></i>"]
 
@@ -78,8 +80,8 @@ $(document).ready(function () {
     })
 
     $('.owl-three').owlCarousel({
-        loop: true,
-        nav: true,
+        loop: false,
+        rewind: true,
         nav: true,
         margin: 12,
         dots: false,
@@ -101,8 +103,8 @@ $(document).ready(function () {
         }
     })
     $('.owl-five').owlCarousel({
-        loop: true,
-        nav: true,
+        loop: false,
+        rewind: true,
         nav: true,
         margin: 0,
         dots: false,
@@ -124,8 +126,8 @@ $(document).ready(function () {
         }
     })
     $('.owl-six').owlCarousel({
-        loop: true,
-        nav: true,
+        loop: false,
+        rewind: true,
         nav: true,
         margin: 12,
         dots: false,

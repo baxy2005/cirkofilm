@@ -11,7 +11,7 @@
   color: $gray-600;
   padding: .1rem;
   i {
-    font-size: 2rem;
+    font-size: 3rem;
     color: $gray-500;
     opacity: .8;
   }
@@ -19,10 +19,11 @@
 .page-item {
   display: flex;
   align-items: center;
+  color: $gray-500;
 }
-.page-item.active .page-link {
+.page-item.active{
   background-color:  transparent;
   border: none;
-  color: $gray-900;
+  color: $gray-900 !important;
 }
 }

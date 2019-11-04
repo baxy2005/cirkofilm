@@ -74,7 +74,7 @@ $(document).ready(function () {
                 margin: 0
             },
             992: {
-                items: 3
+                items: 4
             }
         }
     })

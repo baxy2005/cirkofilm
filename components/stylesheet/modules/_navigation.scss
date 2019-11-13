@@ -2,6 +2,7 @@
   font-weight: bold;
   width: 100%;
   display: flex;
+  overflow: hidden;
   @include media-breakpoint-up (sm) {
   padding: .5rem 0rem;
   };
@@ -256,13 +257,12 @@ footer {
 .offcanvas-collapse {
   left: 0;
   top: 0;
-  transition-property: opacity;
-  transition-duration: .6s;
   opacity: 0;
-  background-color: $gray-900;
+  position:absolute;
   @include media-breakpoint-up (lg) {
     opacity: 1;
     background-color: transparent;
+    position:relative;
   };
   .navbar-toggler  {
     position: absolute;
@@ -271,12 +271,46 @@ footer {
     font-size: 2rem;
   }
   .navbar-nav {
-    margin-top: 2.5rem;
+    // margin-top: 2.5rem;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .6s;
+    background-color: $gray-900;
+    height: 100%;
     @include media-breakpoint-up (lg) {
       margin-top: 0;
+      opacity: 1;
+      background-color: transparent;
+      height: auto;
     };
+    .nav-item:first-child {
+      margin-top: 2.5rem;
+      @include media-breakpoint-up (lg) {
+        margin-top: 0rem;
+      };
+    }
+    .nav-item {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      @include media-breakpoint-up (lg) {
+        margin-left: 0rem;
+        margin-right: 0rem;
+      };
+    }
   }
 }
 .offcanvas-collapse.open {
   opacity: 1;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  // padding-right: 1rem;
+  // padding-left: 1rem;
+  overflow-y: auto;
+  @include media-breakpoint-up (lg) {
+    position: relative;
+  };
+  .navbar-nav {
+    opacity: 1;
+  }
 }

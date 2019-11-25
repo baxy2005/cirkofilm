@@ -187,7 +187,7 @@
 footer {
     .navbar-brand {
     margin-bottom: 1rem;
-    @include media-breakpoint-up (lg) {
+    @include media-breakpoint-up (md) {
       margin-bottom: 0;
     };
     }

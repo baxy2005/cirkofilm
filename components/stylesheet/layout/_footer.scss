@@ -53,7 +53,8 @@ footer {
     align-items: center;
     justify-content: center;
     };
-    @include media-breakpoint-up (lg) {
+
+    @include media-breakpoint-up (xl) {
     align-items: center;
     justify-content: space-between;
     };
@@ -65,7 +66,7 @@ footer {
     margin-bottom: 1rem;
     line-height: 18px;
     color: $gray-800;
-    @include media-breakpoint-up (sm) {
+    @include media-breakpoint-up (md) {
       margin-bottom: 0;
     };
     p {
